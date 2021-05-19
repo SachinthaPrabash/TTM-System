@@ -16,6 +16,7 @@ namespace Time_Table_Management_System.DBConnection
             return con;
         }
 
-
+        
+        //"Server=tcp:ttms.database.windows.net,1433;Initial Catalog=TTM;Persist Security Info=False;User ID=adminuser;Password=admin@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
     }
 }

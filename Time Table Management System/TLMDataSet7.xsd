@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TLMDataSet7" targetNamespace="http://tempuri.org/TLMDataSet7.xsd" xmlns:mstns="http://tempuri.org/TLMDataSet7.xsd" xmlns="http://tempuri.org/TLMDataSet7.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TLMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TLMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Time_Table_Management_System.Properties.Settings.GlobalReference.Default.TLMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="roomTBTableAdapter" GeneratorDataComponentClassName="roomTBTableAdapter" Name="roomTB" UserDataComponentName="roomTBTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TLMConnectionString (Settings)" DbObjectName="TLM.dbo.roomTB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT roomName FROM dbo.roomTB</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="roomName" DataSetColumn="roomName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TLMDataSet7" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TLMDataSet7" msprop:Generator_UserDSName="TLMDataSet7">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="roomTB" msprop:Generator_TableClassName="roomTBDataTable" msprop:Generator_TableVarName="tableroomTB" msprop:Generator_TablePropName="roomTB" msprop:Generator_RowDeletingName="roomTBRowDeleting" msprop:Generator_RowChangingName="roomTBRowChanging" msprop:Generator_RowEvHandlerName="roomTBRowChangeEventHandler" msprop:Generator_RowDeletedName="roomTBRowDeleted" msprop:Generator_UserTableName="roomTB" msprop:Generator_RowChangedName="roomTBRowChanged" msprop:Generator_RowEvArgName="roomTBRowChangeEvent" msprop:Generator_RowClassName="roomTBRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="roomName" msprop:Generator_ColumnVarNameInTable="columnroomName" msprop:Generator_ColumnPropNameInRow="roomName" msprop:Generator_ColumnPropNameInTable="roomNameColumn" msprop:Generator_UserColumnName="roomName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu.Dataviz.WinForms, Version=2.1.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
@@ -158,11 +176,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addLecturer.Designer.cs">
+      <DependentUpon>addLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSession.Designer.cs">
+      <DependentUpon>addSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStd.designer.cs">
+      <DependentUpon>AddStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSubject.Designer.cs">
+      <DependentUpon>addSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTags.designer.cs">
+      <DependentUpon>AddTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddWorkingDays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWorkingDays.designer.cs">
+      <DependentUpon>AddWorkingDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="consecutive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consecutive.designer.cs">
+      <DependentUpon>consecutive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\addLecturerControl.cs" />
+    <Compile Include="Controller\addSessionControl.cs" />
+    <Compile Include="Controller\addSubjectControl.cs" />
+    <Compile Include="Controller\AddWorkingDaysControl.cs" />
+    <Compile Include="Controller\ArrayList.cs" />
+    <Compile Include="Controller\AssignRoomsforgroupControler.cs" />
+    <Compile Include="Controller\AssignRoomsforSubjectControl.cs" />
+    <Compile Include="Controller\ManageSessionControl.cs" />
+    <Compile Include="Controller\NotAvailableLocationControl.cs" />
+    <Compile Include="Controller\NotAvailableTimeControl.cs" />
+    <Compile Include="Controller\roomForLectureControl.cs" />
+    <Compile Include="Controller\SessionController.cs" />
+    <Compile Include="Controller\StdAndTagsController.cs" />
+    <Compile Include="Controller\timeTableController.cs" />
+    <Compile Include="Manage sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage sessions.Designer.cs">
+      <DependentUpon>Manage sessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="addlocation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="addlocation.Designer.cs">
       <DependentUpon>addlocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assign rooms for  Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assign rooms for  Lecturer.Designer.cs">
+      <DependentUpon>Assign rooms for  Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assign rooms for Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assign rooms for Groups.Designer.cs">
+      <DependentUpon>Assign rooms for Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assign rooms for Subject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assign rooms for Subject.Designer.cs">
+      <DependentUpon>Assign rooms for Subject.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller\locationControl.cs" />
     <Compile Include="Controller\roomControl.cs" />
@@ -180,13 +278,89 @@
     <Compile Include="addrooms.Designer.cs">
       <DependentUpon>addrooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add room to session.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add room to session.Designer.cs">
+      <DependentUpon>Add room to session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageLecturer.Designer.cs">
+      <DependentUpon>manageLecturer.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageLocation.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageLocation.Designer.cs">
       <DependentUpon>ManageLocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="manageSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageSession.designer.cs">
+      <DependentUpon>manageSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStd.designer.cs">
+      <DependentUpon>ManageStd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageSubject.Designer.cs">
+      <DependentUpon>manageSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTags.designer.cs">
+      <DependentUpon>ManageTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\addLecturerModel.cs" />
+    <Compile Include="Model\addSessionModel.cs" />
+    <Compile Include="Model\addSubjectModel.cs" />
+    <Compile Include="Model\AddWorkingDaysModel.cs" />
     <Compile Include="Model\locationModel.cs" />
+    <Compile Include="Model\manageSessionModel.cs" />
+    <Compile Include="Model\NotAvailableLocationModel.cs" />
+    <Compile Include="Model\NotAvailableTimeModel.cs" />
+    <Compile Include="Model\SessionModel.cs" />
+    <Compile Include="Model\StdModel.cs" />
+    <Compile Include="Model\TagModel.cs" />
+    <Compile Include="nonOverlap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nonOverlap.designer.cs">
+      <DependentUpon>nonOverlap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotAvailableLoccation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotAvailableLoccation.designer.cs">
+      <DependentUpon>NotAvailableLoccation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotAvailableTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotAvailableTime.designer.cs">
+      <DependentUpon>NotAvailableTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parallel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parallel.designer.cs">
+      <DependentUpon>parallel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionTA.designer.cs">
+      <DependentUpon>SessionTA.cs</DependentUpon>
+    </Compile>
     <Compile Include="statics.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,13 +369,87 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeTable.Designer.cs">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="TLMDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TLMDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TLMDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLMDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLMDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLMDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLMDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLMDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TLMDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TLMDataSet7.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addLecturer.resx">
+      <DependentUpon>addLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSession.resx">
+      <DependentUpon>addSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStd.resx">
+      <DependentUpon>AddStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSubject.resx">
+      <DependentUpon>addSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTags.resx">
+      <DependentUpon>AddTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWorkingDays.resx">
+      <DependentUpon>AddWorkingDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consecutive.resx">
+      <DependentUpon>consecutive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage sessions.resx">
+      <DependentUpon>Manage sessions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addlocation.resx">
       <DependentUpon>addlocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assign rooms for  Lecturer.resx">
+      <DependentUpon>Assign rooms for  Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assign rooms for Groups.resx">
+      <DependentUpon>Assign rooms for Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assign rooms for Subject.resx">
+      <DependentUpon>Assign rooms for Subject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
@@ -209,8 +457,41 @@
     <EmbeddedResource Include="addrooms.resx">
       <DependentUpon>addrooms.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add room to session.resx">
+      <DependentUpon>Add room to session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageLecturer.resx">
+      <DependentUpon>manageLecturer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageLocation.resx">
       <DependentUpon>ManageLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageSession.resx">
+      <DependentUpon>manageSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStd.resx">
+      <DependentUpon>ManageStd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageSubject.resx">
+      <DependentUpon>manageSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTags.resx">
+      <DependentUpon>ManageTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nonOverlap.resx">
+      <DependentUpon>nonOverlap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotAvailableLoccation.resx">
+      <DependentUpon>NotAvailableLoccation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotAvailableTime.resx">
+      <DependentUpon>NotAvailableTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parallel.resx">
+      <DependentUpon>parallel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionTA.resx">
+      <DependentUpon>SessionTA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="statics.resx">
       <DependentUpon>statics.cs</DependentUpon>
@@ -226,6 +507,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TimeTable.resx">
+      <DependentUpon>TimeTable.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -246,6 +530,83 @@
     </None>
     <None Include="TLMDataSet.xss">
       <DependentUpon>TLMDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet1.xsc">
+      <DependentUpon>TLMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet1.xss">
+      <DependentUpon>TLMDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet2.xsc">
+      <DependentUpon>TLMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet2.xss">
+      <DependentUpon>TLMDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet3.xsc">
+      <DependentUpon>TLMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet3.xss">
+      <DependentUpon>TLMDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet4.xsc">
+      <DependentUpon>TLMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet4.xss">
+      <DependentUpon>TLMDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet5.xsc">
+      <DependentUpon>TLMDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet5.xss">
+      <DependentUpon>TLMDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet6.xsc">
+      <DependentUpon>TLMDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet6.xss">
+      <DependentUpon>TLMDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet7.xsc">
+      <DependentUpon>TLMDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TLMDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TLMDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TLMDataSet7.xss">
+      <DependentUpon>TLMDataSet7.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -271,6 +632,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2021-05-15_01-15-59.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
