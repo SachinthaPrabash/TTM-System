@@ -35,13 +35,13 @@ namespace Time_Table_Management_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.selectRoom = new System.Windows.Forms.ComboBox();
+            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.selectGroup = new System.Windows.Forms.ComboBox();
             this.studentGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet2 = new Time_Table_Management_System.TLMDataSet2();
-            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
             this.studentGroupTableAdapter = new Time_Table_Management_System.TLMDataSet2TableAdapters.StudentGroupTableAdapter();
             this.roomTBTableAdapter = new Time_Table_Management_System.TLMDataSet7TableAdapters.roomTBTableAdapter();
             this.groupaForID = new System.Windows.Forms.TextBox();
@@ -52,10 +52,10 @@ namespace Time_Table_Management_System
             this.groupforRoomGridView = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentGroupBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentGroupBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupforRoomGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +116,16 @@ namespace Time_Table_Management_System
             this.selectRoom.TabIndex = 43;
             this.selectRoom.ValueMember = "roomName";
             // 
+            // roomTBBindingSource
+            // 
+            this.roomTBBindingSource.DataMember = "roomTB";
+            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
+            // 
+            // tLMDataSet7
+            // 
+            this.tLMDataSet7.DataSetName = "TLMDataSet7";
+            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -156,16 +166,6 @@ namespace Time_Table_Management_System
             // 
             this.tLMDataSet2.DataSetName = "TLMDataSet2";
             this.tLMDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomTBBindingSource
-            // 
-            this.roomTBBindingSource.DataMember = "roomTB";
-            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
-            // 
-            // tLMDataSet7
-            // 
-            this.tLMDataSet7.DataSetName = "TLMDataSet7";
-            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // studentGroupTableAdapter
             // 
@@ -245,6 +245,7 @@ namespace Time_Table_Management_System
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupforRoomGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.groupforRoomGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupforRoomGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.groupforRoomGridView.Location = new System.Drawing.Point(490, 189);
             this.groupforRoomGridView.Name = "groupforRoomGridView";
@@ -275,10 +276,10 @@ namespace Time_Table_Management_System
             this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentGroupBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentGroupBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupforRoomGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

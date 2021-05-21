@@ -29,9 +29,9 @@ namespace Time_Table_Management_System
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.totrooms = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace Time_Table_Management_System
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lastroom = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -335,17 +335,17 @@ namespace Time_Table_Management_System
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(696, 419);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -357,7 +357,7 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.label9, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lastroom, 1, 3);
             this.tableLayoutPanel7.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.label8, 0, 3);
@@ -374,18 +374,19 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel7.Size = new System.Drawing.Size(286, 336);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
-            // label9
+            // lastroom
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Cornsilk;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(146, 232);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(137, 104);
-            this.label9.TabIndex = 1;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lastroom.AutoSize = true;
+            this.lastroom.BackColor = System.Drawing.Color.Cornsilk;
+            this.lastroom.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lastroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.lastroom.ForeColor = System.Drawing.Color.Crimson;
+            this.lastroom.Location = new System.Drawing.Point(146, 232);
+            this.lastroom.Name = "lastroom";
+            this.lastroom.Size = new System.Drawing.Size(137, 104);
+            this.lastroom.TabIndex = 1;
+            this.lastroom.Text = "label12";
+            this.lastroom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -539,13 +540,12 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-      
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label totrooms;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label totSubj;
         private System.Windows.Forms.Label totStudent;
         private System.Windows.Forms.Label totlect;
+        private System.Windows.Forms.Label lastroom;
     }
 }

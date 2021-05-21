@@ -115,6 +115,32 @@ namespace Time_Table_Management_System.Controller
         }
 
 
+
+        // retrive lecturer details 
+        public DataTable Gettimetable(String lec)
+        {
+
+
+            if (con.State.ToString() != "Open")
+            {
+
+
+                con.Open();
+
+            }
+
+            DataTable gotLectureDet = new DataTable();
+
+            string query = "select distinct s.sesId,w.WorkingDays,s.lec1,sg.SubGroupID,s.duration,r.roomname from WorkingDays w,session s, lecture l,StudentGroup sg, roomTB r,sessionForRoom sr where s.lec1 = l.lid and sr.sesID = s.sesId and sr.roomname = r.roomID and w.EmployeeId = l.lid and sg.StudentgropID = s.group_no and s.lec1 = '"+lec+"' ";
+            SqlDataReader data = new SqlCommand(query, con).ExecuteReader();
+
+
+            gotLectureDet.Load(data);
+            return gotLectureDet;
+
+        }
+
+
     }
         
         }

@@ -38,6 +38,9 @@ namespace Time_Table_Management_System
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.selectSession = new System.Windows.Forms.ComboBox();
+            this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSet6 = new Time_Table_Management_System.TLMDataSet6();
             this.roomselect = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
@@ -47,16 +50,13 @@ namespace Time_Table_Management_System
             this.panel5 = new System.Windows.Forms.Panel();
             this.roomToSubjectID = new System.Windows.Forms.TextBox();
             this.roomtosession = new System.Windows.Forms.DataGridView();
-            this.selectSession = new System.Windows.Forms.ComboBox();
-            this.tLMDataSet6 = new Time_Table_Management_System.TLMDataSet6();
-            this.sessionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sessionTableAdapter = new Time_Table_Management_System.TLMDataSet6TableAdapters.sessionTableAdapter();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet6)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomtosession)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -141,6 +141,28 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(432, 214);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // selectSession
+            // 
+            this.selectSession.DataSource = this.sessionBindingSource;
+            this.selectSession.DisplayMember = "sesId";
+            this.selectSession.Dock = System.Windows.Forms.DockStyle.Top;
+            this.selectSession.FormattingEnabled = true;
+            this.selectSession.Location = new System.Drawing.Point(219, 43);
+            this.selectSession.Name = "selectSession";
+            this.selectSession.Size = new System.Drawing.Size(210, 24);
+            this.selectSession.TabIndex = 46;
+            this.selectSession.ValueMember = "sesId";
+            // 
+            // sessionBindingSource
+            // 
+            this.sessionBindingSource.DataMember = "session";
+            this.sessionBindingSource.DataSource = this.tLMDataSet6;
+            // 
+            // tLMDataSet6
+            // 
+            this.tLMDataSet6.DataSetName = "TLMDataSet6";
+            this.tLMDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roomselect
             // 
@@ -246,6 +268,7 @@ namespace Time_Table_Management_System
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roomtosession.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.roomtosession.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.roomtosession.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomtosession.Location = new System.Drawing.Point(582, 180);
             this.roomtosession.Name = "roomtosession";
@@ -254,28 +277,6 @@ namespace Time_Table_Management_System
             this.roomtosession.Size = new System.Drawing.Size(373, 429);
             this.roomtosession.TabIndex = 45;
             this.roomtosession.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.roomtosession_CellContentClick_1);
-            // 
-            // selectSession
-            // 
-            this.selectSession.DataSource = this.sessionBindingSource;
-            this.selectSession.DisplayMember = "sesId";
-            this.selectSession.Dock = System.Windows.Forms.DockStyle.Top;
-            this.selectSession.FormattingEnabled = true;
-            this.selectSession.Location = new System.Drawing.Point(219, 43);
-            this.selectSession.Name = "selectSession";
-            this.selectSession.Size = new System.Drawing.Size(210, 24);
-            this.selectSession.TabIndex = 46;
-            this.selectSession.ValueMember = "sesId";
-            // 
-            // tLMDataSet6
-            // 
-            this.tLMDataSet6.DataSetName = "TLMDataSet6";
-            this.tLMDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sessionBindingSource
-            // 
-            this.sessionBindingSource.DataMember = "session";
-            this.sessionBindingSource.DataSource = this.tLMDataSet6;
             // 
             // sessionTableAdapter
             // 
@@ -302,10 +303,10 @@ namespace Time_Table_Management_System
             this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet6)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roomtosession)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

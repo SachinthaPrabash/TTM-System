@@ -37,11 +37,11 @@ namespace Time_Table_Management_System
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.selectroom = new System.Windows.Forms.ComboBox();
+            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
             this.lectureName = new System.Windows.Forms.ComboBox();
             this.lectureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet1 = new Time_Table_Management_System.TLMDataSet1();
-            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
             this.lectureTableAdapter = new Time_Table_Management_System.TLMDataSet1TableAdapters.lectureTableAdapter();
             this.roomTBTableAdapter = new Time_Table_Management_System.TLMDataSet7TableAdapters.roomTBTableAdapter();
             this.roomForLecture = new System.Windows.Forms.DataGridView();
@@ -52,10 +52,10 @@ namespace Time_Table_Management_System
             this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomForLecture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,6 +135,16 @@ namespace Time_Table_Management_System
             this.selectroom.TabIndex = 32;
             this.selectroom.ValueMember = "roomName";
             // 
+            // roomTBBindingSource
+            // 
+            this.roomTBBindingSource.DataMember = "roomTB";
+            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
+            // 
+            // tLMDataSet7
+            // 
+            this.tLMDataSet7.DataSetName = "TLMDataSet7";
+            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lectureName
             // 
             this.lectureName.DataSource = this.lectureBindingSource;
@@ -156,16 +166,6 @@ namespace Time_Table_Management_System
             this.tLMDataSet1.DataSetName = "TLMDataSet1";
             this.tLMDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // roomTBBindingSource
-            // 
-            this.roomTBBindingSource.DataMember = "roomTB";
-            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
-            // 
-            // tLMDataSet7
-            // 
-            this.tLMDataSet7.DataSetName = "TLMDataSet7";
-            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // lectureTableAdapter
             // 
             this.lectureTableAdapter.ClearBeforeFill = true;
@@ -180,6 +180,7 @@ namespace Time_Table_Management_System
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.roomForLecture.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.roomForLecture.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.roomForLecture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.roomForLecture.Location = new System.Drawing.Point(542, 193);
             this.roomForLecture.Name = "roomForLecture";
@@ -274,10 +275,10 @@ namespace Time_Table_Management_System
             this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomForLecture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

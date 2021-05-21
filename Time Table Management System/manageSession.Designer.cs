@@ -104,6 +104,8 @@ namespace Time_Table_Management_System
             this.subjectView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.subjectView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.subjectView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.subjectView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.subjectView.Location = new System.Drawing.Point(12, 147);
             this.subjectView.Name = "subjectView";

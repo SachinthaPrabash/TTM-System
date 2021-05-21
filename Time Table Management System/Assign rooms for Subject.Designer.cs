@@ -37,9 +37,9 @@ namespace Time_Table_Management_System
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.enterSubject = new System.Windows.Forms.ComboBox();
-            this.selectRoom = new System.Windows.Forms.ComboBox();
             this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet4 = new Time_Table_Management_System.TLMDataSet4();
+            this.selectRoom = new System.Windows.Forms.ComboBox();
             this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
             this.subjectTableAdapter = new Time_Table_Management_System.TLMDataSet4TableAdapters.subjectTableAdapter();
@@ -137,6 +137,16 @@ namespace Time_Table_Management_System
             this.enterSubject.ValueMember = "sub_name";
             this.enterSubject.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // subjectBindingSource
+            // 
+            this.subjectBindingSource.DataMember = "subject";
+            this.subjectBindingSource.DataSource = this.tLMDataSet4;
+            // 
+            // tLMDataSet4
+            // 
+            this.tLMDataSet4.DataSetName = "TLMDataSet4";
+            this.tLMDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // selectRoom
             // 
             this.selectRoom.DataSource = this.roomTBBindingSource;
@@ -147,16 +157,6 @@ namespace Time_Table_Management_System
             this.selectRoom.Size = new System.Drawing.Size(257, 24);
             this.selectRoom.TabIndex = 44;
             this.selectRoom.ValueMember = "roomName";
-            // 
-            // subjectBindingSource
-            // 
-            this.subjectBindingSource.DataMember = "subject";
-            this.subjectBindingSource.DataSource = this.tLMDataSet4;
-            // 
-            // tLMDataSet4
-            // 
-            this.tLMDataSet4.DataSetName = "TLMDataSet4";
-            this.tLMDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roomTBBindingSource
             // 
@@ -247,6 +247,7 @@ namespace Time_Table_Management_System
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.assignForSubjectRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.assignForSubjectRoom.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.assignForSubjectRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.assignForSubjectRoom.Location = new System.Drawing.Point(526, 186);
             this.assignForSubjectRoom.Name = "assignForSubjectRoom";

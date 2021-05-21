@@ -42,18 +42,23 @@ namespace Time_Table_Management_System
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(231, 82);
+            this.label7.Location = new System.Drawing.Point(308, 101);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(217, 29);
+            this.label7.Size = new System.Drawing.Size(261, 36);
             this.label7.TabIndex = 49;
             this.label7.Text = "Parallel Sessions";
             // 
             // parallelTB
             // 
+            this.parallelTB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.parallelTB.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.parallelTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.parallelTB.Location = new System.Drawing.Point(18, 126);
+            this.parallelTB.Location = new System.Drawing.Point(24, 155);
+            this.parallelTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.parallelTB.Name = "parallelTB";
-            this.parallelTB.Size = new System.Drawing.Size(673, 232);
+            this.parallelTB.RowHeadersWidth = 51;
+            this.parallelTB.Size = new System.Drawing.Size(897, 286);
             this.parallelTB.TabIndex = 48;
             // 
             // dlt
@@ -61,9 +66,10 @@ namespace Time_Table_Management_System
             this.dlt.BackColor = System.Drawing.Color.Navy;
             this.dlt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dlt.ForeColor = System.Drawing.SystemColors.Control;
-            this.dlt.Location = new System.Drawing.Point(556, 382);
+            this.dlt.Location = new System.Drawing.Point(741, 470);
+            this.dlt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dlt.Name = "dlt";
-            this.dlt.Size = new System.Drawing.Size(135, 39);
+            this.dlt.Size = new System.Drawing.Size(180, 48);
             this.dlt.TabIndex = 52;
             this.dlt.Text = "Delete";
             this.dlt.UseVisualStyleBackColor = false;
@@ -72,18 +78,20 @@ namespace Time_Table_Management_System
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 395);
+            this.label1.Location = new System.Drawing.Point(100, 486);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 54;
             this.label1.Text = "Parallel ID";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ParallelId
             // 
-            this.ParallelId.Location = new System.Drawing.Point(160, 392);
+            this.ParallelId.Location = new System.Drawing.Point(213, 482);
+            this.ParallelId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ParallelId.Name = "ParallelId";
-            this.ParallelId.Size = new System.Drawing.Size(135, 20);
+            this.ParallelId.Size = new System.Drawing.Size(179, 22);
             this.ParallelId.TabIndex = 53;
             // 
             // panel1
@@ -91,22 +99,23 @@ namespace Time_Table_Management_System
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 40);
+            this.panel1.Size = new System.Drawing.Size(959, 49);
             this.panel1.TabIndex = 76;
             // 
             // parallel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 433);
+            this.ClientSize = new System.Drawing.Size(959, 533);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ParallelId);
             this.Controls.Add(this.dlt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.parallelTB);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "parallel";
             this.Text = "parallel";
             this.Load += new System.EventHandler(this.parallel_Load);

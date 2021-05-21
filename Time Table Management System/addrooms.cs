@@ -49,15 +49,11 @@ namespace Time_Table_Management_System
            
            
             if (rbLab.Checked = true)
-            {
-                locationModel.roomType = "Lecture Hall";
-
-            }
+                locationModel.roomType = "Lecture Hall";       
             else if (rbLecHall.Checked = true)
                 locationModel.roomType = "Laboratory";
 
-            
-           
+               
             roomControl.insertRoomDetails(locationModel);
 
             clearAll();

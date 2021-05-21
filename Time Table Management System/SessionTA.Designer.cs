@@ -46,9 +46,10 @@ namespace Time_Table_Management_System
             this.NObtn.BackColor = System.Drawing.Color.Navy;
             this.NObtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NObtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.NObtn.Location = new System.Drawing.Point(528, 388);
+            this.NObtn.Location = new System.Drawing.Point(704, 478);
+            this.NObtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NObtn.Name = "NObtn";
-            this.NObtn.Size = new System.Drawing.Size(135, 39);
+            this.NObtn.Size = new System.Drawing.Size(180, 48);
             this.NObtn.TabIndex = 46;
             this.NObtn.Text = "Non Overlapping";
             this.NObtn.UseVisualStyleBackColor = false;
@@ -59,9 +60,10 @@ namespace Time_Table_Management_System
             this.cnt.BackColor = System.Drawing.Color.Navy;
             this.cnt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cnt.ForeColor = System.Drawing.SystemColors.Control;
-            this.cnt.Location = new System.Drawing.Point(62, 388);
+            this.cnt.Location = new System.Drawing.Point(83, 478);
+            this.cnt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cnt.Name = "cnt";
-            this.cnt.Size = new System.Drawing.Size(135, 39);
+            this.cnt.Size = new System.Drawing.Size(180, 48);
             this.cnt.TabIndex = 44;
             this.cnt.Text = "Consecutive";
             this.cnt.UseVisualStyleBackColor = false;
@@ -72,9 +74,10 @@ namespace Time_Table_Management_System
             this.Pbtn.BackColor = System.Drawing.Color.Navy;
             this.Pbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Pbtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.Pbtn.Location = new System.Drawing.Point(294, 388);
+            this.Pbtn.Location = new System.Drawing.Point(392, 478);
+            this.Pbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pbtn.Name = "Pbtn";
-            this.Pbtn.Size = new System.Drawing.Size(135, 39);
+            this.Pbtn.Size = new System.Drawing.Size(180, 48);
             this.Pbtn.TabIndex = 43;
             this.Pbtn.Text = "Parallel";
             this.Pbtn.UseVisualStyleBackColor = false;
@@ -82,10 +85,14 @@ namespace Time_Table_Management_System
             // 
             // SessionTB
             // 
+            this.SessionTB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SessionTB.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SessionTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SessionTB.Location = new System.Drawing.Point(12, 182);
+            this.SessionTB.Location = new System.Drawing.Point(16, 224);
+            this.SessionTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SessionTB.Name = "SessionTB";
-            this.SessionTB.Size = new System.Drawing.Size(689, 187);
+            this.SessionTB.RowHeadersWidth = 51;
+            this.SessionTB.Size = new System.Drawing.Size(919, 230);
             this.SessionTB.TabIndex = 42;
             this.SessionTB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SessionTB_CellContentClick);
             // 
@@ -93,35 +100,39 @@ namespace Time_Table_Management_System
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(109, 77);
+            this.label7.Location = new System.Drawing.Point(145, 95);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(523, 29);
+            this.label7.Size = new System.Drawing.Size(639, 36);
             this.label7.TabIndex = 47;
             this.label7.Text = "Session And Not Available Times Allocation";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 150);
+            this.label1.Location = new System.Drawing.Point(79, 185);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 52;
             this.label1.Text = "Session ID";
             // 
             // sessionsId
             // 
-            this.sessionsId.Location = new System.Drawing.Point(151, 147);
+            this.sessionsId.Location = new System.Drawing.Point(201, 181);
+            this.sessionsId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sessionsId.Name = "sessionsId";
-            this.sessionsId.Size = new System.Drawing.Size(153, 20);
+            this.sessionsId.Size = new System.Drawing.Size(203, 22);
             this.sessionsId.TabIndex = 51;
             // 
             // clear
             // 
             this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.clear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clear.Location = new System.Drawing.Point(528, 137);
+            this.clear.Location = new System.Drawing.Point(704, 169);
+            this.clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(135, 39);
+            this.clear.Size = new System.Drawing.Size(180, 48);
             this.clear.TabIndex = 61;
             this.clear.Text = "Clear";
             this.clear.UseVisualStyleBackColor = false;
@@ -132,16 +143,16 @@ namespace Time_Table_Management_System
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 40);
+            this.panel1.Size = new System.Drawing.Size(959, 49);
             this.panel1.TabIndex = 76;
             // 
             // SessionTA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 454);
+            this.ClientSize = new System.Drawing.Size(959, 559);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.clear);
             this.Controls.Add(this.label1);
@@ -151,6 +162,7 @@ namespace Time_Table_Management_System
             this.Controls.Add(this.cnt);
             this.Controls.Add(this.Pbtn);
             this.Controls.Add(this.SessionTB);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SessionTA";
             this.Text = "SessionTA";
             this.Load += new System.EventHandler(this.SessionTA_Load);

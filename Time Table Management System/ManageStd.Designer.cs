@@ -69,7 +69,7 @@ namespace Time_Table_Management_System
             "CSSE",
             "CSE"});
             this.program.Location = new System.Drawing.Point(213, 69);
-            this.program.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.program.Margin = new System.Windows.Forms.Padding(4);
             this.program.Name = "program";
             this.program.Size = new System.Drawing.Size(279, 24);
             this.program.TabIndex = 37;
@@ -90,7 +90,7 @@ namespace Time_Table_Management_System
             this.clear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.clear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(202)))), ((int)(((byte)(228)))));
             this.clear.Location = new System.Drawing.Point(772, 387);
-            this.clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clear.Margin = new System.Windows.Forms.Padding(4);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(180, 48);
             this.clear.TabIndex = 35;
@@ -103,7 +103,7 @@ namespace Time_Table_Management_System
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
             this.delete.Location = new System.Drawing.Point(772, 320);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(180, 48);
             this.delete.TabIndex = 34;
@@ -117,7 +117,7 @@ namespace Time_Table_Management_System
             this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.update.ForeColor = System.Drawing.SystemColors.Desktop;
             this.update.Location = new System.Drawing.Point(772, 254);
-            this.update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.update.Margin = new System.Windows.Forms.Padding(4);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(180, 48);
             this.update.TabIndex = 33;
@@ -129,7 +129,7 @@ namespace Time_Table_Management_System
             // 
             this.subId.Dock = System.Windows.Forms.DockStyle.Top;
             this.subId.Location = new System.Drawing.Point(666, 121);
-            this.subId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subId.Margin = new System.Windows.Forms.Padding(4);
             this.subId.Name = "subId";
             this.subId.Size = new System.Drawing.Size(316, 22);
             this.subId.TabIndex = 30;
@@ -171,7 +171,7 @@ namespace Time_Table_Management_System
             // 
             this.grpId.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpId.Location = new System.Drawing.Point(666, 69);
-            this.grpId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpId.Margin = new System.Windows.Forms.Padding(4);
             this.grpId.Name = "grpId";
             this.grpId.Size = new System.Drawing.Size(316, 22);
             this.grpId.TabIndex = 26;
@@ -180,7 +180,7 @@ namespace Time_Table_Management_System
             // 
             this.academicYS.Dock = System.Windows.Forms.DockStyle.Top;
             this.academicYS.Location = new System.Drawing.Point(213, 4);
-            this.academicYS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.academicYS.Margin = new System.Windows.Forms.Padding(4);
             this.academicYS.Name = "academicYS";
             this.academicYS.Size = new System.Drawing.Size(279, 22);
             this.academicYS.TabIndex = 25;
@@ -212,9 +212,11 @@ namespace Time_Table_Management_System
             this.stdTB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.stdTB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.stdTB.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.stdTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stdTB.Location = new System.Drawing.Point(13, 186);
-            this.stdTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stdTB.Margin = new System.Windows.Forms.Padding(4);
             this.stdTB.Name = "stdTB";
             this.stdTB.RowHeadersWidth = 51;
             this.stdTB.Size = new System.Drawing.Size(717, 249);
@@ -226,7 +228,7 @@ namespace Time_Table_Management_System
             this.StdID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.StdID.Location = new System.Drawing.Point(705, 137);
-            this.StdID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StdID.Margin = new System.Windows.Forms.Padding(4);
             this.StdID.Name = "StdID";
             this.StdID.Size = new System.Drawing.Size(186, 22);
             this.StdID.TabIndex = 40;
@@ -258,7 +260,7 @@ namespace Time_Table_Management_System
             this.search.BackColor = System.Drawing.Color.Teal;
             this.search.ForeColor = System.Drawing.SystemColors.Desktop;
             this.search.Location = new System.Drawing.Point(772, 186);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(180, 48);
             this.search.TabIndex = 41;
@@ -278,7 +280,7 @@ namespace Time_Table_Management_System
             "04",
             "05"});
             this.grpNum.Location = new System.Drawing.Point(213, 121);
-            this.grpNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpNum.Margin = new System.Windows.Forms.Padding(4);
             this.grpNum.Name = "grpNum";
             this.grpNum.Size = new System.Drawing.Size(279, 24);
             this.grpNum.TabIndex = 42;
@@ -295,7 +297,7 @@ namespace Time_Table_Management_System
             "04",
             "05"});
             this.subGrpNum.Location = new System.Drawing.Point(666, 4);
-            this.subGrpNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subGrpNum.Margin = new System.Windows.Forms.Padding(4);
             this.subGrpNum.Name = "subGrpNum";
             this.subGrpNum.Size = new System.Drawing.Size(316, 24);
             this.subGrpNum.TabIndex = 43;
@@ -364,7 +366,7 @@ namespace Time_Table_Management_System
             this.Controls.Add(this.delete);
             this.Controls.Add(this.update);
             this.Controls.Add(this.stdTB);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageStd";
             this.Text = "ManageStd";
             this.Load += new System.EventHandler(this.ManageStd_Load);

@@ -89,14 +89,14 @@ namespace Time_Table_Management_System
 
                         DataGridViewRow row = this.bunifuDataGridView1.Rows[e.RowIndex];
 
-                        updRoomID.Text = row.Cells["roomForSubjectID"].Value.ToString();
-                        updateBuildingDropdown.Text = row.Cells["sub_name"].Value.ToString();
+                        updRoomID.Text = row.Cells["roomID"].Value.ToString();
+                        updateBuildingDropdown.Text = row.Cells["locationName"].Value.ToString();
                         updRoomName.Text = row.Cells["roomName"].Value.ToString();
-                        updCapacity.Text = row.Cells["roomName"].Value.ToString();
+                        updCapacity.Text = row.Cells["roomCapacity"].Value.ToString();
 
-                        if(row.Cells["roomTyperoomType"].Value.ToString() == "Lecture Hall")
+                        if(row.Cells["roomType"].Value.ToString() == "Lecture Hall")
                             updateLechallRB.Checked = true;
-                        else if(row.Cells["roomTyperoomType"].Value.ToString() == "Laboratory")
+                        else if(row.Cells["roomType"].Value.ToString() == "Laboratory")
                             updateLabRB.Checked = true;
                         else
                         {

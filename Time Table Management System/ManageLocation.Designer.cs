@@ -316,6 +316,7 @@ namespace Time_Table_Management_System
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(49, 118);
             this.bunifuDataGridView1.Name = "bunifuDataGridView1";

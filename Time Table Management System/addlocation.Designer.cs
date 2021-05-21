@@ -87,6 +87,7 @@ namespace Time_Table_Management_System
             // addBuildingID
             // 
             this.addBuildingID.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addBuildingID.Enabled = false;
             this.addBuildingID.Location = new System.Drawing.Point(239, 3);
             this.addBuildingID.Name = "addBuildingID";
             this.addBuildingID.Size = new System.Drawing.Size(449, 22);
@@ -137,6 +138,7 @@ namespace Time_Table_Management_System
             // bunifuDataGridView1
             // 
             this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.bunifuDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bunifuDataGridView1.Location = new System.Drawing.Point(0, 3);

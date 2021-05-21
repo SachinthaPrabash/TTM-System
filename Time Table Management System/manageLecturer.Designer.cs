@@ -32,6 +32,9 @@ namespace Time_Table_Management_System
             this.components = new System.ComponentModel.Container();
             this.m_lec_Level = new System.Windows.Forms.ComboBox();
             this.m_lec_Building = new System.Windows.Forms.ComboBox();
+            this.locationTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSet = new Time_Table_Management_System.TLMDataSet();
             this.m_lec_Center = new System.Windows.Forms.ComboBox();
             this.m_lec_dept = new System.Windows.Forms.ComboBox();
             this.m_lec_Faculty = new System.Windows.Forms.ComboBox();
@@ -60,19 +63,16 @@ namespace Time_Table_Management_System
             this.tLMDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lectureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lectureTableAdapter = new Time_Table_Management_System.TLMDataSet1TableAdapters.lectureTableAdapter();
-            this.tLMDataSet = new Time_Table_Management_System.TLMDataSet();
-            this.tLMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locationTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locationTBTableAdapter = new Time_Table_Management_System.TLMDataSetTableAdapters.locationTBTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecturerView)).BeginInit();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // m_lec_Level
@@ -104,6 +104,21 @@ namespace Time_Table_Management_System
             this.m_lec_Building.Size = new System.Drawing.Size(158, 37);
             this.m_lec_Building.TabIndex = 75;
             this.m_lec_Building.ValueMember = "locationName";
+            // 
+            // locationTBBindingSource
+            // 
+            this.locationTBBindingSource.DataMember = "locationTB";
+            this.locationTBBindingSource.DataSource = this.tLMDataSetBindingSource;
+            // 
+            // tLMDataSetBindingSource
+            // 
+            this.tLMDataSetBindingSource.DataSource = this.tLMDataSet;
+            this.tLMDataSetBindingSource.Position = 0;
+            // 
+            // tLMDataSet
+            // 
+            this.tLMDataSet.DataSetName = "TLMDataSet";
+            this.tLMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // m_lec_Center
             // 
@@ -276,6 +291,8 @@ namespace Time_Table_Management_System
             this.lecturerView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lecturerView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.lecturerView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lecturerView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.lecturerView.Location = new System.Drawing.Point(12, 126);
             this.lecturerView.Name = "lecturerView";
@@ -419,21 +436,6 @@ namespace Time_Table_Management_System
             // 
             this.lectureTableAdapter.ClearBeforeFill = true;
             // 
-            // tLMDataSet
-            // 
-            this.tLMDataSet.DataSetName = "TLMDataSet";
-            this.tLMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tLMDataSetBindingSource
-            // 
-            this.tLMDataSetBindingSource.DataSource = this.tLMDataSet;
-            this.tLMDataSetBindingSource.Position = 0;
-            // 
-            // locationTBBindingSource
-            // 
-            this.locationTBBindingSource.DataMember = "locationTB";
-            this.locationTBBindingSource.DataSource = this.tLMDataSetBindingSource;
-            // 
             // locationTBTableAdapter
             // 
             this.locationTBTableAdapter.ClearBeforeFill = true;
@@ -452,6 +454,9 @@ namespace Time_Table_Management_System
             this.Name = "manageLecturer";
             this.Text = "manageLecturer";
             this.Load += new System.EventHandler(this.manageLecturer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lecturerView)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -460,9 +465,6 @@ namespace Time_Table_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

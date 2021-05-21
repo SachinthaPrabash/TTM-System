@@ -35,16 +35,13 @@ namespace Time_Table_Management_System
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panelchildForm = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.manageSessionpanel = new System.Windows.Forms.Panel();
@@ -52,37 +49,40 @@ namespace Time_Table_Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
             this.sessionpanel = new System.Windows.Forms.Panel();
             this.button28 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
             this.locationpanel = new System.Windows.Forms.Panel();
             this.button17 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
             this.tagpanel = new System.Windows.Forms.Panel();
             this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
             this.Workingdaypanel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.subjectpanel = new System.Windows.Forms.Panel();
             this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
             this.Studentpanel = new System.Windows.Forms.Panel();
             this.button18 = new System.Windows.Forms.Button();
-            this.Stude = new System.Windows.Forms.Button();
             this.lecturePanel = new System.Windows.Forms.Panel();
             this.button16 = new System.Windows.Forms.Button();
-            this.lecture = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button27 = new System.Windows.Forms.Button();
+            this.button25 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.Stude = new System.Windows.Forms.Button();
+            this.lecture = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panelchildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.manageSessionpanel.SuspendLayout();
@@ -93,6 +93,10 @@ namespace Time_Table_Management_System
             this.subjectpanel.SuspendLayout();
             this.Studentpanel.SuspendLayout();
             this.lecturePanel.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -168,15 +172,6 @@ namespace Time_Table_Management_System
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Red;
-            this.panel9.ForeColor = System.Drawing.Color.Coral;
-            this.panel9.Location = new System.Drawing.Point(105, 4189);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(214, 139);
-            this.panel9.TabIndex = 11;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
@@ -236,17 +231,6 @@ namespace Time_Table_Management_System
             this.panelchildForm.Size = new System.Drawing.Size(1004, 687);
             this.panelchildForm.TabIndex = 3;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(303, 134);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(458, 413);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -256,17 +240,6 @@ namespace Time_Table_Management_System
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(391, 198);
             this.panel4.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(398, 191);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -284,6 +257,8 @@ namespace Time_Table_Management_System
             // panel10
             // 
             this.panel10.AutoScroll = true;
+            this.panel10.Controls.Add(this.panel9);
+            this.panel10.Controls.Add(this.button8);
             this.panel10.Controls.Add(this.button7);
             this.panel10.Controls.Add(this.manageSessionpanel);
             this.panel10.Controls.Add(this.button29);
@@ -293,7 +268,6 @@ namespace Time_Table_Management_System
             this.panel10.Controls.Add(this.button25);
             this.panel10.Controls.Add(this.tagpanel);
             this.panel10.Controls.Add(this.button23);
-            this.panel10.Controls.Add(this.panel9);
             this.panel10.Controls.Add(this.Workingdaypanel);
             this.panel10.Controls.Add(this.button21);
             this.panel10.Controls.Add(this.subjectpanel);
@@ -388,25 +362,6 @@ namespace Time_Table_Management_System
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button29
-            // 
-            this.button29.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button29.Image = global::Time_Table_Management_System.Properties.Resources.calendar;
-            this.button29.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button29.Location = new System.Drawing.Point(0, 1144);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(370, 54);
-            this.button29.TabIndex = 17;
-            this.button29.Text = "Manage Sessions";
-            this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button29.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
             // sessionpanel
             // 
             this.sessionpanel.Controls.Add(this.button28);
@@ -430,25 +385,6 @@ namespace Time_Table_Management_System
             this.button28.Text = "Add Session";
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button27
-            // 
-            this.button27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button27.FlatAppearance.BorderSize = 0;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button27.Image = global::Time_Table_Management_System.Properties.Resources.clock__2_;
-            this.button27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button27.Location = new System.Drawing.Point(0, 1007);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(370, 55);
-            this.button27.TabIndex = 15;
-            this.button27.Text = "Session";
-            this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button27.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button27.UseVisualStyleBackColor = true;
-            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // locationpanel
             // 
@@ -490,24 +426,6 @@ namespace Time_Table_Management_System
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
-            // button25
-            // 
-            this.button25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button25.Image = global::Time_Table_Management_System.Properties.Resources.map;
-            this.button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button25.Location = new System.Drawing.Point(0, 822);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(370, 53);
-            this.button25.TabIndex = 13;
-            this.button25.Text = "Location";
-            this.button25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button25.UseVisualStyleBackColor = true;
-            this.button25.Click += new System.EventHandler(this.button25_Click);
-            // 
             // tagpanel
             // 
             this.tagpanel.Controls.Add(this.button24);
@@ -531,24 +449,6 @@ namespace Time_Table_Management_System
             this.button24.Text = " Manage Tags";
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // button23
-            // 
-            this.button23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button23.Image = global::Time_Table_Management_System.Properties.Resources.tag;
-            this.button23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button23.Location = new System.Drawing.Point(0, 695);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(370, 49);
-            this.button23.TabIndex = 8;
-            this.button23.Text = "Tags";
-            this.button23.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // Workingdaypanel
             // 
@@ -606,24 +506,6 @@ namespace Time_Table_Management_System
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
-            // button21
-            // 
-            this.button21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button21.Image = global::Time_Table_Management_System.Properties.Resources.computer;
-            this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button21.Location = new System.Drawing.Point(0, 412);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(370, 55);
-            this.button21.TabIndex = 6;
-            this.button21.Text = "Time Managment";
-            this.button21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
             // subjectpanel
             // 
             this.subjectpanel.Controls.Add(this.button20);
@@ -648,24 +530,6 @@ namespace Time_Table_Management_System
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
-            // button19
-            // 
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button19.Image = global::Time_Table_Management_System.Properties.Resources.study;
-            this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.Location = new System.Drawing.Point(0, 261);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(370, 68);
-            this.button19.TabIndex = 4;
-            this.button19.Text = "Subject";
-            this.button19.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
             // Studentpanel
             // 
             this.Studentpanel.Controls.Add(this.button18);
@@ -689,24 +553,6 @@ namespace Time_Table_Management_System
             this.button18.Text = "Manage Student Group";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // Stude
-            // 
-            this.Stude.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Stude.FlatAppearance.BorderSize = 0;
-            this.Stude.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Stude.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.Stude.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Stude.Image = global::Time_Table_Management_System.Properties.Resources.student_1_;
-            this.Stude.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Stude.Location = new System.Drawing.Point(0, 131);
-            this.Stude.Name = "Stude";
-            this.Stude.Size = new System.Drawing.Size(370, 53);
-            this.Stude.TabIndex = 2;
-            this.Stude.Text = "Student Group";
-            this.Stude.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Stude.UseVisualStyleBackColor = true;
-            this.Stude.Click += new System.EventHandler(this.Stude_Click);
             // 
             // lecturePanel
             // 
@@ -733,6 +579,203 @@ namespace Time_Table_Management_System
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox3);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 1762);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(370, 114);
+            this.panel9.TabIndex = 22;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(303, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(458, 413);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(370, 114);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button8
+            // 
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button8.Image = global::Time_Table_Management_System.Properties.Resources.timetable;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 1698);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(370, 64);
+            this.button8.TabIndex = 21;
+            this.button8.Text = "TimeTable Genarate";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button7.Image = global::Time_Table_Management_System.Properties.Resources._static;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 1629);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(370, 69);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Statics ";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button29
+            // 
+            this.button29.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button29.FlatAppearance.BorderSize = 0;
+            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button29.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button29.Image = global::Time_Table_Management_System.Properties.Resources.calendar;
+            this.button29.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button29.Location = new System.Drawing.Point(0, 1144);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(370, 54);
+            this.button29.TabIndex = 17;
+            this.button29.Text = "Manage Sessions";
+            this.button29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button29.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button27
+            // 
+            this.button27.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button27.FlatAppearance.BorderSize = 0;
+            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button27.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button27.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button27.Image = global::Time_Table_Management_System.Properties.Resources.clock__2_;
+            this.button27.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button27.Location = new System.Drawing.Point(0, 1007);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(370, 55);
+            this.button27.TabIndex = 15;
+            this.button27.Text = "Session";
+            this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button27.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // button25
+            // 
+            this.button25.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button25.FlatAppearance.BorderSize = 0;
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button25.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button25.Image = global::Time_Table_Management_System.Properties.Resources.map;
+            this.button25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button25.Location = new System.Drawing.Point(0, 822);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(370, 53);
+            this.button25.TabIndex = 13;
+            this.button25.Text = "Location";
+            this.button25.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
+            // 
+            // button23
+            // 
+            this.button23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button23.FlatAppearance.BorderSize = 0;
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button23.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button23.Image = global::Time_Table_Management_System.Properties.Resources.tag;
+            this.button23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button23.Location = new System.Drawing.Point(0, 695);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(370, 49);
+            this.button23.TabIndex = 8;
+            this.button23.Text = "Tags";
+            this.button23.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button21
+            // 
+            this.button21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button21.FlatAppearance.BorderSize = 0;
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button21.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button21.Image = global::Time_Table_Management_System.Properties.Resources.computer;
+            this.button21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button21.Location = new System.Drawing.Point(0, 412);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(370, 55);
+            this.button21.TabIndex = 6;
+            this.button21.Text = "Time Managment";
+            this.button21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button19
+            // 
+            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button19.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button19.Image = global::Time_Table_Management_System.Properties.Resources.study;
+            this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button19.Location = new System.Drawing.Point(0, 261);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(370, 68);
+            this.button19.TabIndex = 4;
+            this.button19.Text = "Subject";
+            this.button19.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // Stude
+            // 
+            this.Stude.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Stude.FlatAppearance.BorderSize = 0;
+            this.Stude.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Stude.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.Stude.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Stude.Image = global::Time_Table_Management_System.Properties.Resources.student_1_;
+            this.Stude.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Stude.Location = new System.Drawing.Point(0, 131);
+            this.Stude.Name = "Stude";
+            this.Stude.Size = new System.Drawing.Size(370, 53);
+            this.Stude.TabIndex = 2;
+            this.Stude.Text = "Student Group";
+            this.Stude.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Stude.UseVisualStyleBackColor = true;
+            this.Stude.Click += new System.EventHandler(this.Stude_Click);
+            // 
             // lecture
             // 
             this.lecture.Dock = System.Windows.Forms.DockStyle.Top;
@@ -752,24 +795,16 @@ namespace Time_Table_Management_System
             this.lecture.UseVisualStyleBackColor = true;
             this.lecture.Click += new System.EventHandler(this.button15_Click);
             // 
-            // button7
+            // pictureBox1
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Image = global::Time_Table_Management_System.Properties.Resources._static;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 1629);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(370, 54);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Statics ";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, -9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(398, 191);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Homepage
             // 
@@ -786,9 +821,7 @@ namespace Time_Table_Management_System
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelchildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.manageSessionpanel.ResumeLayout(false);
@@ -799,6 +832,10 @@ namespace Time_Table_Management_System
             this.subjectpanel.ResumeLayout(false);
             this.Studentpanel.ResumeLayout(false);
             this.lecturePanel.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -817,7 +854,6 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -853,6 +889,9 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button8;
     }
 }
 

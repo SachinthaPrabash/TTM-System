@@ -41,8 +41,12 @@ namespace Time_Table_Management_System
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.selectroom = new System.Windows.Forms.ComboBox();
+            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
             this.label9 = new System.Windows.Forms.Label();
             this.selectlocation = new System.Windows.Forms.ComboBox();
+            this.locationTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tLMDataSet = new Time_Table_Management_System.TLMDataSet();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.TextBox();
@@ -53,20 +57,16 @@ namespace Time_Table_Management_System
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tLMDataSet = new Time_Table_Management_System.TLMDataSet();
-            this.locationTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.locationTBTableAdapter = new Time_Table_Management_System.TLMDataSetTableAdapters.locationTBTableAdapter();
-            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
-            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomTBTableAdapter = new Time_Table_Management_System.TLMDataSet7TableAdapters.roomTBTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataviewNL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // selectstart1
@@ -103,6 +103,7 @@ namespace Time_Table_Management_System
             this.dataviewNL.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataviewNL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataviewNL.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataviewNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataviewNL.Location = new System.Drawing.Point(459, 177);
@@ -193,6 +194,16 @@ namespace Time_Table_Management_System
             this.selectroom.ValueMember = "roomName";
             this.selectroom.SelectedIndexChanged += new System.EventHandler(this.selectgroup_SelectedIndexChanged);
             // 
+            // roomTBBindingSource
+            // 
+            this.roomTBBindingSource.DataMember = "roomTB";
+            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
+            // 
+            // tLMDataSet7
+            // 
+            this.tLMDataSet7.DataSetName = "TLMDataSet7";
+            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -216,6 +227,16 @@ namespace Time_Table_Management_System
             this.selectlocation.TabIndex = 109;
             this.selectlocation.ValueMember = "locationName";
             this.selectlocation.SelectedIndexChanged += new System.EventHandler(this.selectlecure_SelectedIndexChanged);
+            // 
+            // locationTBBindingSource
+            // 
+            this.locationTBBindingSource.DataMember = "locationTB";
+            this.locationTBBindingSource.DataSource = this.tLMDataSet;
+            // 
+            // tLMDataSet
+            // 
+            this.tLMDataSet.DataSetName = "TLMDataSet";
+            this.tLMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label8
             // 
@@ -336,29 +357,9 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel2.Size = new System.Drawing.Size(223, 99);
             this.tableLayoutPanel2.TabIndex = 128;
             // 
-            // tLMDataSet
-            // 
-            this.tLMDataSet.DataSetName = "TLMDataSet";
-            this.tLMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // locationTBBindingSource
-            // 
-            this.locationTBBindingSource.DataMember = "locationTB";
-            this.locationTBBindingSource.DataSource = this.tLMDataSet;
-            // 
             // locationTBTableAdapter
             // 
             this.locationTBTableAdapter.ClearBeforeFill = true;
-            // 
-            // tLMDataSet7
-            // 
-            this.tLMDataSet7.DataSetName = "TLMDataSet7";
-            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // roomTBBindingSource
-            // 
-            this.roomTBBindingSource.DataMember = "roomTB";
-            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
             // 
             // roomTBTableAdapter
             // 
@@ -382,15 +383,15 @@ namespace Time_Table_Management_System
             this.Text = "NotAvailableLoccation";
             this.Load += new System.EventHandler(this.NotAvailableLoccation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataviewNL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -50,12 +50,12 @@ namespace Time_Table_Management_System
             this.panel2 = new System.Windows.Forms.Panel();
             this.Aid = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.ComboBox();
             this.lectureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet1 = new Time_Table_Management_System.TLMDataSet1();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lectureTableAdapter = new Time_Table_Management_System.TLMDataSet1TableAdapters.lectureTableAdapter();
-            this.textBox1 = new System.Windows.Forms.ComboBox();
             this.dataview = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -321,6 +321,18 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1.Size = new System.Drawing.Size(442, 497);
             this.tableLayoutPanel1.TabIndex = 101;
             // 
+            // textBox1
+            // 
+            this.textBox1.DataSource = this.lectureBindingSource;
+            this.textBox1.DisplayMember = "lid";
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.FormattingEnabled = true;
+            this.textBox1.Location = new System.Drawing.Point(224, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(215, 24);
+            this.textBox1.TabIndex = 106;
+            this.textBox1.ValueMember = "lid";
+            // 
             // lectureBindingSource
             // 
             this.lectureBindingSource.DataMember = "lecture";
@@ -351,23 +363,13 @@ namespace Time_Table_Management_System
             // 
             this.lectureTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.DataSource = this.lectureBindingSource;
-            this.textBox1.DisplayMember = "lid";
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.FormattingEnabled = true;
-            this.textBox1.Location = new System.Drawing.Point(224, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 24);
-            this.textBox1.TabIndex = 106;
-            this.textBox1.ValueMember = "lid";
-            // 
             // dataview
             // 
             this.dataview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataview.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataview.Location = new System.Drawing.Point(560, 153);
             this.dataview.Name = "dataview";

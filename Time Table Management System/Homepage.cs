@@ -59,7 +59,7 @@ namespace Time_Table_Management_System
         {
             if (subMenu.Visible == false)
             {
-                //hideSubMenu();
+                hideSubMenu();
                 subMenu.Visible = true;
             }
             else
@@ -228,6 +228,11 @@ namespace Time_Table_Management_System
         private void lecturePanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Timetable());
         }
     }
 }

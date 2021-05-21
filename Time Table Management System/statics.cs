@@ -26,10 +26,10 @@ namespace Time_Table_Management_System
             con = DBConnection.getDBConnection();
             
             //last data
-            lastrecordroom();
+            
             lastStudentGroup();
             lastlecture();
-
+            lastrecordroom();
 
             //total 
             totCalrooms();
@@ -70,16 +70,16 @@ namespace Time_Table_Management_System
         {
             con.Open();
             SqlDataAdapter sd = new SqlDataAdapter("SELECT roomName from roomTB  ORDER BY roomID DESC ", con);
-            DataTable dt1 = new DataTable();
-            sd.Fill(dt1);
-            label9.Text = dt1.Rows[0][0].ToString();
+            DataTable dt2 = new DataTable();
+            sd.Fill(dt2);
+            lastroom.Text = dt2.Rows[0][0].ToString();
             con.Close();
         }
 
         void lastStudentGroup()
         {
             con.Open();
-            SqlDataAdapter sd = new SqlDataAdapter("SELECT SubGroupNum from StudentGroup  ORDER BY StudentgropID DESC ", con);
+            SqlDataAdapter sd = new SqlDataAdapter("SELECT SubGroupID from StudentGroup  ORDER BY StudentgropID DESC ", con);
             DataTable dt1 = new DataTable();
             sd.Fill(dt1);
             label11.Text = dt1.Rows[0][0].ToString();
