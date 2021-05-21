@@ -79,5 +79,10 @@ namespace Time_Table_Management_System
             totrooms.Text = dt1.Rows[0][0].ToString();
             con.Close();
         }
+
+        private void totrooms_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

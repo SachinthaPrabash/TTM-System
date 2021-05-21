@@ -29,24 +29,8 @@ namespace Time_Table_Management_System
             // TODO: This line of code loads data into the 'tLMDataSet.locationTB' table. You can move, or remove it, as needed.
             this.locationTBTableAdapter.Fill(this.tLMDataSet.locationTB);
             bunifuDataGridView1.DataSource = roomControl.getRoomvalues();
-        }
 
-        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            updRoomID.Text = bunifuDataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            updateBuildingDropdown.Text = bunifuDataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            updRoomName.Text = bunifuDataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            updCapacity.Text = bunifuDataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-
-            if (bunifuDataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Lecture Hall")
-                updateLechallRB.Checked = true;
-            else if (bunifuDataGridView1.SelectedRows[0].Cells[4].Value.ToString() == "Laboratory")
-                updateLabRB.Checked = true;
-            else
-            {
-                updateLechallRB.Checked = false;
-                updateLabRB.Checked = false;
-            }
+            clearall();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -91,6 +75,38 @@ namespace Time_Table_Management_System
             updCapacity.Clear();
             updateLechallRB.Checked = false;
             updateLabRB.Checked = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+         
+
+            if (e.RowIndex >= 0)
+            {
+                {
+                    if (e.RowIndex >= 0)
+                    {
+
+                        DataGridViewRow row = this.bunifuDataGridView1.Rows[e.RowIndex];
+
+                        updRoomID.Text = row.Cells["roomForSubjectID"].Value.ToString();
+                        updateBuildingDropdown.Text = row.Cells["sub_name"].Value.ToString();
+                        updRoomName.Text = row.Cells["roomName"].Value.ToString();
+                        updCapacity.Text = row.Cells["roomName"].Value.ToString();
+
+                        if(row.Cells["roomTyperoomType"].Value.ToString() == "Lecture Hall")
+                            updateLechallRB.Checked = true;
+                        else if(row.Cells["roomTyperoomType"].Value.ToString() == "Laboratory")
+                            updateLabRB.Checked = true;
+                        else
+                        {
+                            updateLechallRB.Checked = false;
+                            updateLabRB.Checked = false;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }

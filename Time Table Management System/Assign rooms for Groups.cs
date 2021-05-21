@@ -100,5 +100,70 @@ namespace Time_Table_Management_System
 
             groupforRoomGridView.DataSource = AssignRoomsforgroupControler.ViewGroup();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            String group = selectGroup.Text;
+            String room = selectRoom.Text;
+
+            AssignRoomsforgroupControler.insertAssignRoomsforgroup(group, room);
+
+            clearAll();
+
+            groupforRoomGridView.DataSource = AssignRoomsforgroupControler.ViewGroup();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String id = groupaForID.Text;
+            String gro = selectGroup.Text;
+            String room = selectRoom.Text;
+
+            AssignRoomsforgroupControler.groupForSessionUpdate(id, gro, room);
+
+            clearAll();
+
+            groupforRoomGridView.DataSource = AssignRoomsforgroupControler.ViewGroup();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            String id = groupaForID.Text;
+
+            AssignRoomsforgroupControler.groupForSessionDelete(id);
+
+            clearAll();
+
+            groupforRoomGridView.DataSource = AssignRoomsforgroupControler.ViewGroup();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+ 
+
+            if (e.RowIndex >= 0)
+            {
+                {
+                    if (e.RowIndex >= 0)
+                    {
+
+                        DataGridViewRow row = this.groupforRoomGridView.Rows[e.RowIndex];
+
+                        groupaForID.Text = row.Cells["groupForRoomID"].Value.ToString();
+                        selectGroup.Text = row.Cells["SubGroupID"].Value.ToString();
+                        selectRoom.Text = row.Cells["roomName"].Value.ToString();
+
+                    }
+                }
+            }
+
+        }
     }
 }

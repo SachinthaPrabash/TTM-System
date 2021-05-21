@@ -35,24 +35,13 @@ namespace Time_Table_Management_System
         private void addbtn_Click(object sender, EventArgs e)
         {
             
-            if (addBuildingname.Text != "" )
-            {
-                locationModel.buildingname = addBuildingname.Text;
-                LocationControl.insertLocationDetails(locationModel);
-
-                bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();     
-            }
-            else
-            {
-                MessageBox.Show("Please Fill the all the required fields ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
 
         //bind data from table to text
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            addBuildingID.Text = bunifuDataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            addBuildingname.Text = bunifuDataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+           
         }
 
         //retrive data set to tabale
@@ -61,35 +50,6 @@ namespace Time_Table_Management_System
             bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();
         }
 
-        //delete location data
-        private void btndelete_Click(object sender, EventArgs e)
-        {
-            int x = int.Parse( addBuildingID.Text);
-            LocationControl.DeleteLocationDet(x);
-
-            clearAll();
-
-            bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();
-        }
-
-        //update location data
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            int y = int.Parse(addBuildingID.Text);
-            String buildingname = addBuildingname.Text;
-
-            LocationControl.updateLocationDetails(buildingname,y);
-
-            clearAll();
-
-            bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();
-        }
-
-        //location clear button
-        private void clearbtn_Click(object sender, EventArgs e)
-        {
-            clearAll();
-        }
 
         //all clear method
         private void clearAll()
@@ -110,6 +70,68 @@ namespace Time_Table_Management_System
             {
                 e.Cancel = false;
                 errorProvider1.SetError(addBuildingname, "");
+            }
+        }
+
+        private void addbtn_Click_1(object sender, EventArgs e)
+        {
+            if (addBuildingname.Text != "")
+            {
+                locationModel.buildingname = addBuildingname.Text;
+                LocationControl.insertLocationDetails(locationModel);
+
+                bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();
+            }
+            else
+            {
+                MessageBox.Show("Please Fill the all the required fields ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btndelete_Click_1(object sender, EventArgs e)
+        {
+            int x = int.Parse(addBuildingID.Text);
+            LocationControl.DeleteLocationDet(x);
+
+            clearAll();
+
+            bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            int y = int.Parse(addBuildingID.Text);
+            String buildingname = addBuildingname.Text;
+
+            LocationControl.updateLocationDetails(buildingname, y);
+
+            clearAll();
+
+            bunifuDataGridView1.DataSource = LocationControl.getlocationvalues();
+        }
+
+        private void clearbtn_Click_1(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void bunifuDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+ 
+            if (e.RowIndex >= 0)
+            {
+                {
+                    if (e.RowIndex >= 0)
+                    {
+
+                        DataGridViewRow row = this.bunifuDataGridView1.Rows[e.RowIndex];
+
+                        addBuildingID.Text = row.Cells["locationID"].Value.ToString();
+                        addBuildingname.Text = row.Cells["locationName"].Value.ToString();
+                        
+
+                    }
+                }
             }
         }
     }

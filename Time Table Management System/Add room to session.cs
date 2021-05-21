@@ -19,7 +19,7 @@ namespace Time_Table_Management_System
         DBcon DBConnection = new DBcon();
         SqlConnection con = new SqlConnection();
 
-
+    
         ManageSessionControl ManageSessionControl = new ManageSessionControl();
 
         public Manage_session()
@@ -27,7 +27,8 @@ namespace Time_Table_Management_System
             InitializeComponent();
             con = DBConnection.getDBConnection();
 
-            test1();
+          
+              test1();
 
         }
 
@@ -37,10 +38,58 @@ namespace Time_Table_Management_System
 
         }
 
-        private void savebtn_Click(object sender, EventArgs e)
+
+        public void clearAll()
+        {
+            selectSession.SelectedIndex=-1;
+            roomselect.SelectedIndex=-1;
+            roomToSubjectID.Clear();
+        }
+
+
+
+        private void Manage_session_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'tLMDataSet6.session' table. You can move, or remove it, as needed.
+            this.sessionTableAdapter.Fill(this.tLMDataSet6.session);
+            roomtosession.DataSource = ManageSessionControl.getsessionValues();
+            clearAll();
+
+        }
+
+        public void test1()
+        {
+            con.Open();
+
+            String id = selectSession.Text;
+
+            DataSet ds = new DataSet();
+            
+
+            String query = "select distinct r.roomName from roomForLecture rl,roomTB r, roomForGroup rg,roomForSubject rs where rl.room = r.roomID  or rg.room = r.roomID  or rs.room = r.roomID and rg.subGroupID IN(select s.group_no from session s where s.sesId= '" + id + "') and rl.lectureName IN(select s.lec1 from session s where s.sesId= '" + id + "') and rs.roomForSubjectID IN(select subject_name from session where sesId = '" + id + "') ";
+            SqlDataReader dr;
+            SqlCommand com = new SqlCommand(query, con);
+
+            SqlDataAdapter sda = new SqlDataAdapter(com);
+
+
+            sda.Fill(ds);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                roomselect.Items.Add(ds.Tables[0].Rows[i][0]);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void savebtn_Click_1(object sender, EventArgs e)
         {
             int x = int.Parse(selectSession.Text);
-            String roomname = selectRoom.Text;
+            String roomname = roomselect.Text;
 
             ManageSessionControl.insertManageSessionRoom(roomname, x);
             clearAll();
@@ -48,40 +97,15 @@ namespace Time_Table_Management_System
             roomtosession.DataSource = ManageSessionControl.getsessionValues();
         }
 
-        public void clearAll()
-        {
-            selectSession.Clear();
-            selectRoom.Clear();
-            roomToSubjectID.Clear();
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            clearAll();
-        }
-
-        private void Manage_session_Load(object sender, EventArgs e)
-        {
-            roomtosession.DataSource = ManageSessionControl.getsessionValues();
-            
-        }
-
-        private void roomtosession_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            roomToSubjectID.Text = roomtosession.SelectedRows[0].Cells[0].Value.ToString();
-            selectSession.Text = roomtosession.SelectedRows[0].Cells[1].Value.ToString();
-            selectRoom.Text = roomtosession.SelectedRows[0].Cells[2].Value.ToString();
-        }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             String sesid = selectSession.Text;
-            String room = selectRoom.Text;
+            String room = roomselect.Text;
             String ID = roomToSubjectID.Text;
 
-            
 
-            ManageSessionControl.updateRoomForSession(ID,sesid, room);
+
+            ManageSessionControl.updateRoomForSession(ID, sesid, room);
 
             clearAll();
 
@@ -89,7 +113,7 @@ namespace Time_Table_Management_System
 
         }
 
-        private void bunifuButton3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             String id = roomToSubjectID.Text;
 
@@ -100,76 +124,27 @@ namespace Time_Table_Management_System
             roomtosession.DataSource = ManageSessionControl.getsessionValues();
         }
 
-        private void selectRoom_TextChanged(object sender, EventArgs e)
+        private void roomtosession_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
            
-        }
-
-        private void bunifuDropdown1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void SELECTrOOM()
-        {
-            DataRow dr;
-            String id = selectSession.Text;
-
-            if (con.State.ToString() != "Open")
+            if (e.RowIndex >= 0)
             {
-                con.Open();
-            }
+                {
+                    if (e.RowIndex >= 0)
+                    {
 
-            String query = "select distinct r.roomName from roomForLecture rl,roomTB r, roomForGroup rg,roomForSubject rs where rl.room = r.roomID  or rg.room = r.roomID  or rs.room = r.roomID and rg.subGroupID IN(select s.group_no from session s where s.sesId= '" + id + "') and rl.lectureName IN(select s.lec1 from session s where s.sesId= '" + id + "') and rs.roomForSubjectID IN(select subject_name from session where sesId = '" + id + "') ";
+                        DataGridViewRow row = this.roomtosession.Rows[e.RowIndex];
 
-            SqlCommand com = new SqlCommand(query, con);
+                        roomToSubjectID.Text = row.Cells["seesionForRoomID"].Value.ToString();
+                        selectSession.Text = row.Cells["sesId"].Value.ToString();
+                        roomselect.Text = row.Cells["roomName"].Value.ToString();
 
-            SqlDataAdapter sda = new SqlDataAdapter(com);
-           
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            dr = dt.NewRow();
-            dr.ItemArray = new object[] { "--Select room--" };
-
-            dt.Rows.InsertAt(dr, 0);
-
-            
-
-
-           
-            bunifuDropdown1.DataSource = dt;
-            
-
-            con.Close();
-        }
-
-        public void test1()
-        {
-            con.Open();
-
-            String id = selectSession.Text;
-
-            DataSet ds = new DataSet();
-
-
-           
-            String query = "select distinct r.roomName from roomForLecture rl,roomTB r, roomForGroup rg,roomForSubject rs where rl.room = r.roomID  or rg.room = r.roomID  or rs.room = r.roomID and rg.subGroupID IN(select s.group_no from session s where s.sesId= '" + id + "') and rl.lectureName IN(select s.lec1 from session s where s.sesId= '" + id + "') and rs.roomForSubjectID IN(select subject_name from session where sesId = '" + id + "') ";
-            SqlDataReader dr;
-            SqlCommand com = new SqlCommand(query, con);
-
-            SqlDataAdapter sda = new SqlDataAdapter(com);
-
-            
-            sda.Fill(ds);
-
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-            {
-                bunifuDropdown1.Items.Add(ds.Tables[0].Rows[i][0]);
+                    }
+                }
             }
         }
-
 
 
     }
 }
+

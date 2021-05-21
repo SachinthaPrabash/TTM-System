@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bunifu.UI.WinForms.BunifuButton;
+
 using Time_Table_Management_System.DBConnection;
 using Time_Table_Management_System.Model;
 using Time_Table_Management_System.Controller;
@@ -36,7 +36,7 @@ namespace Time_Table_Management_System
         {
             // TODO: This line of code loads data into the 'tLMDataSet.locationTB' table. You can move, or remove it, as needed.
             this.locationTBTableAdapter.Fill(this.tLMDataSet.locationTB);
-            
+            clearAll();
         }
 
         //insert rooms data

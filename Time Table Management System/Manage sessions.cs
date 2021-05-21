@@ -34,7 +34,27 @@ namespace Time_Table_Management_System
 
         private void Add_Room_to_Session_Load(object sender, EventArgs e)
         {
-            bunifuDataGridView1.DataSource = ManageSessionControl.fullsessionretrive();
+            dataGridView1.DataSource = ManageSessionControl.fullsessionretrive();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ManageSessionControl.fullsessionretrive();
         }
     }
 }

@@ -30,22 +30,6 @@ namespace Time_Table_Management_System
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageLocation));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -53,26 +37,26 @@ namespace Time_Table_Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuDataGridView1 = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.updateBuildingDropdown = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.updateBuildingDropdown = new System.Windows.Forms.ComboBox();
             this.locationTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet = new Time_Table_Management_System.TLMDataSet();
-            this.updCapacity = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.updCapacity = new System.Windows.Forms.RichTextBox();
+            this.updRoomName = new System.Windows.Forms.RichTextBox();
+            this.updRoomID = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.updateLabRB = new System.Windows.Forms.RadioButton();
             this.updateLechallRB = new System.Windows.Forms.RadioButton();
-            this.updRoomName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.updRoomID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.locationTBTableAdapter = new Time_Table_Management_System.TLMDataSetTableAdapters.locationTBTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
+            this.bunifuDataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -172,70 +156,6 @@ namespace Time_Table_Management_System
             this.label6.TabIndex = 17;
             this.label6.Text = "Capacity";
             // 
-            // bunifuDataGridView1
-            // 
-            this.bunifuDataGridView1.AllowCustomTheming = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.bunifuDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.bunifuDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bunifuDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.bunifuDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bunifuDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.bunifuDataGridView1.ColumnHeadersHeight = 40;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            this.bunifuDataGridView1.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.Name = null;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuDataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.bunifuDataGridView1.EnableHeadersVisualStyles = false;
-            this.bunifuDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
-            this.bunifuDataGridView1.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDataGridView1.HeaderBgColor = System.Drawing.Color.Empty;
-            this.bunifuDataGridView1.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuDataGridView1.Location = new System.Drawing.Point(24, 112);
-            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
-            this.bunifuDataGridView1.RowHeadersVisible = false;
-            this.bunifuDataGridView1.RowHeadersWidth = 51;
-            this.bunifuDataGridView1.RowTemplate.Height = 40;
-            this.bunifuDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bunifuDataGridView1.Size = new System.Drawing.Size(727, 326);
-            this.bunifuDataGridView1.TabIndex = 24;
-            this.bunifuDataGridView1.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bunifuDataGridView1_CellContentClick);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 4;
@@ -245,14 +165,14 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.05186F));
             this.tableLayoutPanel4.Controls.Add(this.updateBuildingDropdown, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.updCapacity, 3, 1);
+            this.tableLayoutPanel4.Controls.Add(this.updRoomName, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.updRoomID, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label6, 2, 1);
             this.tableLayoutPanel4.Controls.Add(this.label1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.updRoomName, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.updRoomID, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 465);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -266,48 +186,14 @@ namespace Time_Table_Management_System
             // 
             // updateBuildingDropdown
             // 
-            this.updateBuildingDropdown.BackColor = System.Drawing.Color.Transparent;
-            this.updateBuildingDropdown.BackgroundColor = System.Drawing.Color.White;
-            this.updateBuildingDropdown.BorderColor = System.Drawing.Color.Silver;
-            this.updateBuildingDropdown.BorderRadius = 1;
-            this.updateBuildingDropdown.Color = System.Drawing.Color.Silver;
             this.updateBuildingDropdown.DataSource = this.locationTBBindingSource;
-            this.updateBuildingDropdown.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.updateBuildingDropdown.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.updateBuildingDropdown.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.updateBuildingDropdown.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.updateBuildingDropdown.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.updateBuildingDropdown.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
             this.updateBuildingDropdown.DisplayMember = "locationName";
             this.updateBuildingDropdown.Dock = System.Windows.Forms.DockStyle.Top;
-            this.updateBuildingDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.updateBuildingDropdown.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.updateBuildingDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.updateBuildingDropdown.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.updateBuildingDropdown.FillDropDown = true;
-            this.updateBuildingDropdown.FillIndicator = false;
-            this.updateBuildingDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateBuildingDropdown.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.updateBuildingDropdown.ForeColor = System.Drawing.Color.Black;
             this.updateBuildingDropdown.FormattingEnabled = true;
-            this.updateBuildingDropdown.Icon = null;
-            this.updateBuildingDropdown.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.updateBuildingDropdown.IndicatorColor = System.Drawing.Color.Gray;
-            this.updateBuildingDropdown.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.updateBuildingDropdown.ItemBackColor = System.Drawing.Color.White;
-            this.updateBuildingDropdown.ItemBorderColor = System.Drawing.Color.White;
-            this.updateBuildingDropdown.ItemForeColor = System.Drawing.Color.Black;
-            this.updateBuildingDropdown.ItemHeight = 26;
-            this.updateBuildingDropdown.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.updateBuildingDropdown.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.updateBuildingDropdown.ItemTopMargin = 3;
             this.updateBuildingDropdown.Location = new System.Drawing.Point(198, 69);
             this.updateBuildingDropdown.Name = "updateBuildingDropdown";
-            this.updateBuildingDropdown.Size = new System.Drawing.Size(310, 32);
-            this.updateBuildingDropdown.TabIndex = 26;
-            this.updateBuildingDropdown.Text = null;
-            this.updateBuildingDropdown.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.updateBuildingDropdown.TextLeftMargin = 5;
+            this.updateBuildingDropdown.Size = new System.Drawing.Size(310, 24);
+            this.updateBuildingDropdown.TabIndex = 27;
             this.updateBuildingDropdown.ValueMember = "locationName";
             // 
             // locationTBBindingSource
@@ -322,78 +208,30 @@ namespace Time_Table_Management_System
             // 
             // updCapacity
             // 
-            this.updCapacity.AcceptsReturn = false;
-            this.updCapacity.AcceptsTab = false;
-            this.updCapacity.AnimationSpeed = 200;
-            this.updCapacity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.updCapacity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.updCapacity.BackColor = System.Drawing.Color.White;
-            this.updCapacity.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updCapacity.BackgroundImage")));
-            this.updCapacity.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.updCapacity.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.updCapacity.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.updCapacity.BorderColorIdle = System.Drawing.Color.Silver;
-            this.updCapacity.BorderRadius = 1;
-            this.updCapacity.BorderThickness = 1;
-            this.updCapacity.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.updCapacity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.updCapacity.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.updCapacity.DefaultText = "";
             this.updCapacity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.updCapacity.FillColor = System.Drawing.Color.White;
-            this.updCapacity.HideSelection = true;
-            this.updCapacity.IconLeft = null;
-            this.updCapacity.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.updCapacity.IconPadding = 10;
-            this.updCapacity.IconRight = null;
-            this.updCapacity.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.updCapacity.Lines = new string[0];
             this.updCapacity.Location = new System.Drawing.Point(671, 69);
-            this.updCapacity.MaxLength = 32767;
-            this.updCapacity.MinimumSize = new System.Drawing.Size(1, 1);
-            this.updCapacity.Modified = false;
-            this.updCapacity.Multiline = false;
             this.updCapacity.Name = "updCapacity";
-            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties13.FillColor = System.Drawing.Color.Empty;
-            stateProperties13.ForeColor = System.Drawing.Color.Empty;
-            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updCapacity.OnActiveState = stateProperties13;
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.updCapacity.OnDisabledState = stateProperties14;
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties15.FillColor = System.Drawing.Color.Empty;
-            stateProperties15.ForeColor = System.Drawing.Color.Empty;
-            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updCapacity.OnHoverState = stateProperties15;
-            stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
-            stateProperties16.ForeColor = System.Drawing.Color.Empty;
-            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updCapacity.OnIdleState = stateProperties16;
-            this.updCapacity.Padding = new System.Windows.Forms.Padding(3);
-            this.updCapacity.PasswordChar = '\0';
-            this.updCapacity.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.updCapacity.PlaceholderText = "Enter text";
-            this.updCapacity.ReadOnly = false;
-            this.updCapacity.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.updCapacity.SelectedText = "";
-            this.updCapacity.SelectionLength = 0;
-            this.updCapacity.SelectionStart = 0;
-            this.updCapacity.ShortcutsEnabled = true;
-            this.updCapacity.Size = new System.Drawing.Size(312, 37);
-            this.updCapacity.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.updCapacity.TabIndex = 24;
-            this.updCapacity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.updCapacity.TextMarginBottom = 0;
-            this.updCapacity.TextMarginLeft = 3;
-            this.updCapacity.TextMarginTop = 0;
-            this.updCapacity.TextPlaceholder = "Enter text";
-            this.updCapacity.UseSystemPasswordChar = false;
-            this.updCapacity.WordWrap = true;
+            this.updCapacity.Size = new System.Drawing.Size(312, 38);
+            this.updCapacity.TabIndex = 29;
+            this.updCapacity.Text = "";
+            // 
+            // updRoomName
+            // 
+            this.updRoomName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.updRoomName.Location = new System.Drawing.Point(198, 120);
+            this.updRoomName.Name = "updRoomName";
+            this.updRoomName.Size = new System.Drawing.Size(310, 38);
+            this.updRoomName.TabIndex = 28;
+            this.updRoomName.Text = "";
+            // 
+            // updRoomID
+            // 
+            this.updRoomID.Dock = System.Windows.Forms.DockStyle.Top;
+            this.updRoomID.Location = new System.Drawing.Point(198, 3);
+            this.updRoomID.Name = "updRoomID";
+            this.updRoomID.Size = new System.Drawing.Size(310, 38);
+            this.updRoomID.TabIndex = 27;
+            this.updRoomID.Text = "";
             // 
             // label1
             // 
@@ -447,81 +285,6 @@ namespace Time_Table_Management_System
             this.updateLechallRB.Text = "Lecture Hall";
             this.updateLechallRB.UseVisualStyleBackColor = true;
             // 
-            // updRoomName
-            // 
-            this.updRoomName.AcceptsReturn = false;
-            this.updRoomName.AcceptsTab = false;
-            this.updRoomName.AnimationSpeed = 200;
-            this.updRoomName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.updRoomName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.updRoomName.BackColor = System.Drawing.Color.White;
-            this.updRoomName.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updRoomName.BackgroundImage")));
-            this.updRoomName.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.updRoomName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.updRoomName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.updRoomName.BorderColorIdle = System.Drawing.Color.Silver;
-            this.updRoomName.BorderRadius = 1;
-            this.updRoomName.BorderThickness = 1;
-            this.updRoomName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.updRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.updRoomName.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.updRoomName.DefaultText = "";
-            this.updRoomName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.updRoomName.FillColor = System.Drawing.Color.White;
-            this.updRoomName.HideSelection = true;
-            this.updRoomName.IconLeft = null;
-            this.updRoomName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.updRoomName.IconPadding = 10;
-            this.updRoomName.IconRight = null;
-            this.updRoomName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.updRoomName.Lines = new string[0];
-            this.updRoomName.Location = new System.Drawing.Point(198, 120);
-            this.updRoomName.MaxLength = 32767;
-            this.updRoomName.MinimumSize = new System.Drawing.Size(1, 1);
-            this.updRoomName.Modified = false;
-            this.updRoomName.Multiline = false;
-            this.updRoomName.Name = "updRoomName";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updRoomName.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.updRoomName.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updRoomName.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updRoomName.OnIdleState = stateProperties20;
-            this.updRoomName.Padding = new System.Windows.Forms.Padding(3);
-            this.updRoomName.PasswordChar = '\0';
-            this.updRoomName.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.updRoomName.PlaceholderText = "Enter text";
-            this.updRoomName.ReadOnly = false;
-            this.updRoomName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.updRoomName.SelectedText = "";
-            this.updRoomName.SelectionLength = 0;
-            this.updRoomName.SelectionStart = 0;
-            this.updRoomName.ShortcutsEnabled = true;
-            this.updRoomName.Size = new System.Drawing.Size(310, 37);
-            this.updRoomName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.updRoomName.TabIndex = 23;
-            this.updRoomName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.updRoomName.TextMarginBottom = 0;
-            this.updRoomName.TextMarginLeft = 3;
-            this.updRoomName.TextMarginTop = 0;
-            this.updRoomName.TextPlaceholder = "Enter text";
-            this.updRoomName.UseSystemPasswordChar = false;
-            this.updRoomName.WordWrap = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -533,82 +296,6 @@ namespace Time_Table_Management_System
             this.label5.Size = new System.Drawing.Size(108, 28);
             this.label5.TabIndex = 25;
             this.label5.Text = "Room ID";
-            // 
-            // updRoomID
-            // 
-            this.updRoomID.AcceptsReturn = false;
-            this.updRoomID.AcceptsTab = false;
-            this.updRoomID.AnimationSpeed = 200;
-            this.updRoomID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.updRoomID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.updRoomID.BackColor = System.Drawing.Color.White;
-            this.updRoomID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("updRoomID.BackgroundImage")));
-            this.updRoomID.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.updRoomID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.updRoomID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.updRoomID.BorderColorIdle = System.Drawing.Color.Silver;
-            this.updRoomID.BorderRadius = 1;
-            this.updRoomID.BorderThickness = 1;
-            this.updRoomID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.updRoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.updRoomID.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.updRoomID.DefaultText = "";
-            this.updRoomID.Dock = System.Windows.Forms.DockStyle.Top;
-            this.updRoomID.Enabled = false;
-            this.updRoomID.FillColor = System.Drawing.Color.White;
-            this.updRoomID.HideSelection = true;
-            this.updRoomID.IconLeft = null;
-            this.updRoomID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.updRoomID.IconPadding = 10;
-            this.updRoomID.IconRight = null;
-            this.updRoomID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.updRoomID.Lines = new string[0];
-            this.updRoomID.Location = new System.Drawing.Point(198, 3);
-            this.updRoomID.MaxLength = 32767;
-            this.updRoomID.MinimumSize = new System.Drawing.Size(1, 1);
-            this.updRoomID.Modified = false;
-            this.updRoomID.Multiline = false;
-            this.updRoomID.Name = "updRoomID";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updRoomID.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.updRoomID.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updRoomID.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.updRoomID.OnIdleState = stateProperties24;
-            this.updRoomID.Padding = new System.Windows.Forms.Padding(3);
-            this.updRoomID.PasswordChar = '\0';
-            this.updRoomID.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.updRoomID.PlaceholderText = "Enter text";
-            this.updRoomID.ReadOnly = true;
-            this.updRoomID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.updRoomID.SelectedText = "";
-            this.updRoomID.SelectionLength = 0;
-            this.updRoomID.SelectionStart = 0;
-            this.updRoomID.ShortcutsEnabled = true;
-            this.updRoomID.Size = new System.Drawing.Size(310, 37);
-            this.updRoomID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.updRoomID.TabIndex = 26;
-            this.updRoomID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.updRoomID.TextMarginBottom = 0;
-            this.updRoomID.TextMarginLeft = 3;
-            this.updRoomID.TextMarginTop = 0;
-            this.updRoomID.TextPlaceholder = "Enter text";
-            this.updRoomID.UseSystemPasswordChar = false;
-            this.updRoomID.WordWrap = true;
             // 
             // locationTBTableAdapter
             // 
@@ -623,14 +310,29 @@ namespace Time_Table_Management_System
             this.panel1.Size = new System.Drawing.Size(986, 49);
             this.panel1.TabIndex = 26;
             // 
+            // bunifuDataGridView1
+            // 
+            this.bunifuDataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bunifuDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bunifuDataGridView1.Location = new System.Drawing.Point(49, 118);
+            this.bunifuDataGridView1.Name = "bunifuDataGridView1";
+            this.bunifuDataGridView1.RowHeadersWidth = 51;
+            this.bunifuDataGridView1.RowTemplate.Height = 24;
+            this.bunifuDataGridView1.Size = new System.Drawing.Size(716, 312);
+            this.bunifuDataGridView1.TabIndex = 27;
+            this.bunifuDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // ManageLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 640);
+            this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.bunifuDataGridView1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdateRoom);
@@ -638,13 +340,13 @@ namespace Time_Table_Management_System
             this.Name = "ManageLocation";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.locationTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,20 +361,20 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private Bunifu.UI.WinForms.BunifuDataGridView bunifuDataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.RadioButton updateLabRB;
         private System.Windows.Forms.RadioButton updateLechallRB;
-        private Bunifu.UI.WinForms.BunifuTextBox updCapacity;
-        private Bunifu.UI.WinForms.BunifuTextBox updRoomName;
         private System.Windows.Forms.Label label5;
-        private Bunifu.UI.WinForms.BunifuTextBox updRoomID;
-        private Bunifu.UI.WinForms.BunifuDropdown updateBuildingDropdown;
         private TLMDataSet tLMDataSet;
         private System.Windows.Forms.BindingSource locationTBBindingSource;
         private TLMDataSetTableAdapters.locationTBTableAdapter locationTBTableAdapter;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox updateBuildingDropdown;
+        private System.Windows.Forms.RichTextBox updCapacity;
+        private System.Windows.Forms.RichTextBox updRoomName;
+        private System.Windows.Forms.RichTextBox updRoomID;
+        private System.Windows.Forms.DataGridView bunifuDataGridView1;
     }
 }

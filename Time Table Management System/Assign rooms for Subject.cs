@@ -94,5 +94,71 @@ namespace Time_Table_Management_System
 
             assignForSubjectRoom.DataSource = AssignRoomsforSubject.viewSubjectRoom();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String subj = enterSubject.Text;
+            String room = selectRoom.Text;
+
+            AssignRoomsforSubject.insertAssignRoomsforSubject(subj, room);
+
+            clearAll();
+
+            assignForSubjectRoom.DataSource = AssignRoomsforSubject.viewSubjectRoom();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String id = roomForSubjectID.Text;
+            String sub = enterSubject.Text;
+            String room = selectRoom.Text;
+
+            AssignRoomsforSubject.updateRoomForSubject(id, sub, room);
+
+            clearAll();
+
+            assignForSubjectRoom.DataSource = AssignRoomsforSubject.viewSubjectRoom();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String id = roomForSubjectID.Text;
+
+            AssignRoomsforSubject.deleteRoomForSubject(id);
+
+            clearAll();
+
+            assignForSubjectRoom.DataSource = AssignRoomsforSubject.viewSubjectRoom();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                {
+                    if (e.RowIndex >= 0)
+                    {
+
+                        DataGridViewRow row = this.assignForSubjectRoom.Rows[e.RowIndex];
+
+                        roomForSubjectID.Text = row.Cells["roomForSubjectID"].Value.ToString();
+                        enterSubject.Text = row.Cells["sub_name"].Value.ToString();
+                        selectRoom.Text = row.Cells["roomName"].Value.ToString();
+
+                    }
+                }
+            }
+        }
     }
 }

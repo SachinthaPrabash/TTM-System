@@ -67,13 +67,7 @@ namespace Time_Table_Management_System
             clearAll();
         }
 
-        private void roomForLecture_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            lecid.Text = roomForLecture.SelectedRows[0].Cells[0].Value.ToString();
-            lectureName.Text = roomForLecture.SelectedRows[0].Cells[1].Value.ToString();
-            selectroom.Text = roomForLecture.SelectedRows[0].Cells[2].Value.ToString();
-        }
+  
 
         private void bunifuButton4_Click(object sender, EventArgs e)
         {
@@ -90,6 +84,83 @@ namespace Time_Table_Management_System
         }
 
         private void bunifuButton3_Click(object sender, EventArgs e)
+        {
+            String lc = lecid.Text;
+
+            roomForLectureControl.deleteRoomForLecture(lc);
+
+            clearAll();
+
+            roomForLecture.DataSource = roomForLectureControl.viewLectureForRoom();
+        }
+
+        private void selectroom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+            if (e.RowIndex >= 0)
+            {
+                {
+                    if (e.RowIndex >= 0)
+                    {
+
+                        DataGridViewRow row = this.roomForLecture.Rows[e.RowIndex];
+
+                        lecid.Text = row.Cells["roomForLectureID"].Value.ToString();
+                        lectureName.Text = row.Cells["lecturerName"].Value.ToString();
+                        selectroom.Text = row.Cells["roomName"].Value.ToString();
+
+                    }
+                }
+            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            String leName = lectureName.Text;
+            String room = selectroom.Text;
+
+            roomForLectureControl.insertroomForLecture(leName, room);
+
+            clearAll();
+
+            roomForLecture.DataSource = roomForLectureControl.viewLectureForRoom();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String lec = lectureName.Text;
+            String room = selectroom.Text;
+            String id = lecid.Text;
+
+
+            roomForLectureControl.updateRoomForLecture(id, lec, room);
+
+            clearAll();
+
+            roomForLecture.DataSource = roomForLectureControl.viewLectureForRoom();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
             String lc = lecid.Text;
 

@@ -155,9 +155,13 @@ namespace Time_Table_Management_System
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+          
+        }
+
+        private void dataview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             if (e.RowIndex >= 0)
             {
-
                 {
                     if (e.RowIndex >= 0)
                     {
