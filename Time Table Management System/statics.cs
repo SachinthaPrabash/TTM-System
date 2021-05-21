@@ -27,9 +27,15 @@ namespace Time_Table_Management_System
             
             //last data
             lastrecordroom();
+            lastStudentGroup();
+            lastlecture();
+
 
             //total 
             totCalrooms();
+            totalSubject();
+            totalStudent();
+            totalLecture();
 
 
         }
@@ -70,6 +76,28 @@ namespace Time_Table_Management_System
             con.Close();
         }
 
+        void lastStudentGroup()
+        {
+            con.Open();
+            SqlDataAdapter sd = new SqlDataAdapter("SELECT SubGroupNum from StudentGroup  ORDER BY StudentgropID DESC ", con);
+            DataTable dt1 = new DataTable();
+            sd.Fill(dt1);
+            label11.Text = dt1.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        void lastlecture()
+        {
+            con.Open();
+            SqlDataAdapter sd = new SqlDataAdapter("SELECT lecturerName from lecture  ORDER BY lid DESC ", con);
+            DataTable dt1 = new DataTable();
+            sd.Fill(dt1);
+            label10.Text = dt1.Rows[0][0].ToString();
+            con.Close();
+        }
+
+
+
         void totCalrooms()
         {
             con.Open();
@@ -80,7 +108,42 @@ namespace Time_Table_Management_System
             con.Close();
         }
 
+        void totalSubject()
+        {
+            con.Open();
+            SqlDataAdapter sd = new SqlDataAdapter("select count(distinct sub_name) from subject  ", con);
+            DataTable dt1 = new DataTable();
+            sd.Fill(dt1);
+            totSubj.Text = dt1.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        void totalStudent()
+        {
+            con.Open();
+            SqlDataAdapter sd = new SqlDataAdapter("select count(distinct StudentgropID) from StudentGroup  ", con);
+            DataTable dt1 = new DataTable();
+            sd.Fill(dt1);
+            totStudent.Text = dt1.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        void totalLecture()
+        {
+            con.Open();
+            SqlDataAdapter sd = new SqlDataAdapter(" select count(distinct lid) from lecture   ", con);
+            DataTable dt1 = new DataTable();
+            sd.Fill(dt1);
+            totlect.Text = dt1.Rows[0][0].ToString();
+            con.Close();
+        }
+
         private void totrooms_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
         {
 
         }

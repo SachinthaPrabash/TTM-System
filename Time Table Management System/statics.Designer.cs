@@ -38,12 +38,15 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.totSubj = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.totStudent = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.totlect = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -57,9 +60,6 @@ namespace Time_Table_Management_System
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -155,7 +155,7 @@ namespace Time_Table_Management_System
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Crimson;
-            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.totSubj);
             this.panel3.Controls.Add(this.tableLayoutPanel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(502, 10);
@@ -163,6 +163,21 @@ namespace Time_Table_Management_System
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(226, 201);
             this.panel3.TabIndex = 3;
+            // 
+            // totSubj
+            // 
+            this.totSubj.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totSubj.AutoSize = true;
+            this.totSubj.BackColor = System.Drawing.Color.Transparent;
+            this.totSubj.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totSubj.Location = new System.Drawing.Point(81, 53);
+            this.totSubj.Name = "totSubj";
+            this.totSubj.Size = new System.Drawing.Size(49, 36);
+            this.totSubj.TabIndex = 2;
+            this.totSubj.Text = "25";
+            this.totSubj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel4
             // 
@@ -193,7 +208,7 @@ namespace Time_Table_Management_System
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.totStudent);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(256, 10);
@@ -201,6 +216,21 @@ namespace Time_Table_Management_System
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(226, 201);
             this.panel2.TabIndex = 2;
+            // 
+            // totStudent
+            // 
+            this.totStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totStudent.AutoSize = true;
+            this.totStudent.BackColor = System.Drawing.Color.Transparent;
+            this.totStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totStudent.Location = new System.Drawing.Point(91, 53);
+            this.totStudent.Name = "totStudent";
+            this.totStudent.Size = new System.Drawing.Size(49, 36);
+            this.totStudent.TabIndex = 3;
+            this.totStudent.Text = "25";
+            this.totStudent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel3
             // 
@@ -232,7 +262,7 @@ namespace Time_Table_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Coral;
-            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.totlect);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(10, 10);
@@ -240,6 +270,21 @@ namespace Time_Table_Management_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 201);
             this.panel1.TabIndex = 1;
+            // 
+            // totlect
+            // 
+            this.totlect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totlect.AutoSize = true;
+            this.totlect.BackColor = System.Drawing.Color.Transparent;
+            this.totlect.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totlect.Location = new System.Drawing.Point(81, 53);
+            this.totlect.Name = "totlect";
+            this.totlect.Size = new System.Drawing.Size(49, 36);
+            this.totlect.TabIndex = 4;
+            this.totlect.Text = "25";
+            this.totlect.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -304,6 +349,7 @@ namespace Time_Table_Management_System
             this.chart1.Size = new System.Drawing.Size(696, 419);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -358,11 +404,11 @@ namespace Time_Table_Management_System
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(3, 171);
+            this.label7.Location = new System.Drawing.Point(3, 161);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 20);
+            this.label7.Size = new System.Drawing.Size(137, 40);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Last Student";
+            this.label7.Text = "Last Student group";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -429,51 +475,6 @@ namespace Time_Table_Management_System
             this.label5.TabIndex = 0;
             this.label5.Text = "Last Added Data";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(81, 53);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 36);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "25";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(91, 53);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 36);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "25";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(81, 53);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 36);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "25";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // statics
             // 
@@ -543,8 +544,8 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.Label totrooms;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label totSubj;
+        private System.Windows.Forms.Label totStudent;
+        private System.Windows.Forms.Label totlect;
     }
 }

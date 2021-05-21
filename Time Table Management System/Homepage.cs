@@ -219,5 +219,15 @@ namespace Time_Table_Management_System
         {
             openChildForm(new SessionTA());
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            openChildForm(new statics());
+        }
+
+        private void lecturePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
