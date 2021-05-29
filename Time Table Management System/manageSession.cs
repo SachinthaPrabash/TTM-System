@@ -176,5 +176,32 @@ namespace Time_Table_Management_System
             subjectView.DataSource = review.GetSessionDetails();
             reset();
         }
+
+        private void search_value_TextChanged(object sender, EventArgs e)
+        {
+            addSessionControl srch = new addSessionControl();
+
+            string srchValu = search_value.Text;
+
+            if (srchValu == null)
+            {
+
+
+                subjectView.DataSource = review.GetSessionDetails();
+
+            }
+            else
+            {
+
+                subjectView.DataSource = srch.searchData(search_value.Text);
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            addSessionControl srch = new addSessionControl();
+            subjectView.DataSource = srch.searchData(search_value.Text);
+        }
     }
 }

@@ -99,12 +99,14 @@ namespace Time_Table_Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             addLecturerControl updateLec = new addLecturerControl();
+            float rank = updateLec.generatteRank(int.Parse(m_lec_Level.Text), int.Parse(m_lec_Id.Text));
+            m_lec_Rank.Text = rank.ToString();
 
-            updateLec.updateLec(m_lec_name.Text,m_lec_Id.Text,m_lec_Faculty.Text,m_lec_dept.Text,m_lec_Center.Text,m_lec_Building.Text,int.Parse(m_lec_Level.Text),float.Parse(m_lec_Rank.Text),int.Parse(m_lec_Lid.Text));
+            updateLec.updateLec(m_lec_name.Text, m_lec_Id.Text, m_lec_Faculty.Text, m_lec_dept.Text, m_lec_Center.Text, m_lec_Building.Text, int.Parse(m_lec_Level.Text), float.Parse(m_lec_Rank.Text), int.Parse(m_lec_Lid.Text));
 
             lecturerView.DataSource = controlLec.GetLecturerDetails();
 
-            
+
         }
 
 

@@ -119,5 +119,33 @@ namespace Time_Table_Management_System.Controller
         }
 
 
+
+        public DataTable searchData(String search_value)
+        {
+
+
+
+            if (con.State.ToString() != "Open")
+            {
+
+                con.Open();
+
+            }
+
+            DataTable gotSessionDet = new DataTable();
+
+            string query = "select * from session where CONCAT([sesId],[lec1],[lec2],[lec1_Tag],[group_no],[subject_name],[noOfStudent],[duration]) like '%" + search_value + "%'";
+            SqlDataReader data = new SqlCommand(query, con).ExecuteReader();
+
+
+            gotSessionDet.Load(data);
+            return gotSessionDet;
+
+
+
+
+        }
+
+
     }
 }

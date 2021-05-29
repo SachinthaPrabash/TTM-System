@@ -61,7 +61,7 @@ namespace Time_Table_Management_System
             this.button4 = new System.Windows.Forms.Button();
             this.sessionId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.session_search = new System.Windows.Forms.TextBox();
+            this.search_value = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lectureTableAdapter = new Time_Table_Management_System.TLMDataSet1TableAdapters.lectureTableAdapter();
@@ -407,14 +407,15 @@ namespace Time_Table_Management_System
             this.label1.Text = "Session";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // session_search
+            // search_value
             // 
-            this.session_search.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.session_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.session_search.Location = new System.Drawing.Point(463, 70);
-            this.session_search.Name = "session_search";
-            this.session_search.Size = new System.Drawing.Size(255, 38);
-            this.session_search.TabIndex = 97;
+            this.search_value.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.search_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_value.Location = new System.Drawing.Point(463, 70);
+            this.search_value.Name = "search_value";
+            this.search_value.Size = new System.Drawing.Size(255, 38);
+            this.search_value.TabIndex = 97;
+            this.search_value.TextChanged += new System.EventHandler(this.search_value_TextChanged);
             // 
             // button5
             // 
@@ -426,6 +427,7 @@ namespace Time_Table_Management_System
             this.button5.TabIndex = 98;
             this.button5.Text = "Search";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -484,7 +486,7 @@ namespace Time_Table_Management_System
             this.ClientSize = new System.Drawing.Size(986, 640);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.session_search);
+            this.Controls.Add(this.search_value);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -536,7 +538,7 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox sessionId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox session_search;
+        private System.Windows.Forms.TextBox search_value;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private TLMDataSet1 tLMDataSet1;
