@@ -69,7 +69,7 @@ namespace Time_Table_Management_System
 
         private void dlt_Click(object sender, EventArgs e)
         {
-            DeleteDB(this.ParallelId.Text, "Parallel");
+           
             
         }
 
@@ -78,5 +78,9 @@ namespace Time_Table_Management_System
             
         }
 
+        private void dlt_Click_1(object sender, EventArgs e)
+        {
+            DeleteDB(this.ParallelId.Text, "Parallel");
+        }
     }
 }
