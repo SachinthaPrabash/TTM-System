@@ -54,7 +54,6 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,7 +69,7 @@ namespace Time_Table_Management_System
             // btnupdate
             // 
             this.btnupdate.BackColor = System.Drawing.Color.Yellow;
-            this.btnupdate.Location = new System.Drawing.Point(768, 399);
+            this.btnupdate.Location = new System.Drawing.Point(741, 384);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Size = new System.Drawing.Size(110, 42);
             this.btnupdate.TabIndex = 90;
@@ -86,7 +85,7 @@ namespace Time_Table_Management_System
             "02 Hours",
             "03 Hours",
             "04 Hours"});
-            this.comboBox4.Location = new System.Drawing.Point(244, 336);
+            this.comboBox4.Location = new System.Drawing.Point(244, 272);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(240, 24);
             this.comboBox4.TabIndex = 87;
@@ -98,7 +97,7 @@ namespace Time_Table_Management_System
             "08 : 30 AM",
             "12 : 30 PM",
             "05 : 30 PM"});
-            this.comboBox3.Location = new System.Drawing.Point(244, 182);
+            this.comboBox3.Location = new System.Drawing.Point(244, 123);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(170, 24);
             this.comboBox3.TabIndex = 86;
@@ -106,7 +105,7 @@ namespace Time_Table_Management_System
             // btndelete
             // 
             this.btndelete.BackColor = System.Drawing.Color.Red;
-            this.btndelete.Location = new System.Drawing.Point(906, 397);
+            this.btndelete.Location = new System.Drawing.Point(880, 383);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(110, 43);
             this.btndelete.TabIndex = 82;
@@ -117,9 +116,9 @@ namespace Time_Table_Management_System
             // btnadd
             // 
             this.btnadd.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnadd.Location = new System.Drawing.Point(618, 399);
+            this.btnadd.Location = new System.Drawing.Point(593, 384);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(112, 47);
+            this.btnadd.Size = new System.Drawing.Size(131, 47);
             this.btnadd.TabIndex = 76;
             this.btnadd.Text = "ADD";
             this.btnadd.UseVisualStyleBackColor = false;
@@ -149,7 +148,7 @@ namespace Time_Table_Management_System
             "5",
             "6",
             "7"});
-            this.comboBox1.Location = new System.Drawing.Point(244, 62);
+            this.comboBox1.Location = new System.Drawing.Point(244, 66);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 24);
             this.comboBox1.TabIndex = 96;
@@ -162,7 +161,7 @@ namespace Time_Table_Management_System
             this.dataview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataview.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataview.Location = new System.Drawing.Point(560, 86);
+            this.dataview.Location = new System.Drawing.Point(613, 64);
             this.dataview.Name = "dataview";
             this.dataview.RowHeadersWidth = 51;
             this.dataview.RowTemplate.Height = 24;
@@ -183,9 +182,9 @@ namespace Time_Table_Management_System
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(244, 115);
+            this.button1.Location = new System.Drawing.Point(68, 80);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 42);
+            this.button1.Size = new System.Drawing.Size(114, 34);
             this.button1.TabIndex = 113;
             this.button1.Text = "Select Days";
             this.button1.UseVisualStyleBackColor = false;
@@ -199,11 +198,11 @@ namespace Time_Table_Management_System
             this.dataGridViewdays.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewdays.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewdays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewdays.Location = new System.Drawing.Point(254, 6);
+            this.dataGridViewdays.Location = new System.Drawing.Point(237, 0);
             this.dataGridViewdays.Name = "dataGridViewdays";
             this.dataGridViewdays.RowHeadersWidth = 51;
             this.dataGridViewdays.RowTemplate.Height = 24;
-            this.dataGridViewdays.Size = new System.Drawing.Size(771, 125);
+            this.dataGridViewdays.Size = new System.Drawing.Size(842, 160);
             this.dataGridViewdays.TabIndex = 114;
             this.dataGridViewdays.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewdays_CellContentClick);
             // 
@@ -211,7 +210,7 @@ namespace Time_Table_Management_System
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(94, 61);
+            this.label9.Location = new System.Drawing.Point(54, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 27);
             this.label9.TabIndex = 115;
@@ -234,11 +233,12 @@ namespace Time_Table_Management_System
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridViewdays);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 461);
+            this.panel1.Location = new System.Drawing.Point(0, 452);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1091, 178);
+            this.panel1.Size = new System.Drawing.Size(1091, 187);
             this.panel1.TabIndex = 117;
             // 
             // panel2
@@ -265,17 +265,15 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.68231F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.31769F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox5, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.Aid, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox5, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 59);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -285,15 +283,16 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.04662F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.44522F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.94172F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 402);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(554, 393);
             this.tableLayoutPanel1.TabIndex = 133;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label12.Location = new System.Drawing.Point(3, 59);
+            this.label12.Location = new System.Drawing.Point(3, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(234, 32);
             this.label12.TabIndex = 108;
@@ -307,26 +306,16 @@ namespace Time_Table_Management_System
             "08 : 30 AM",
             "12 : 30 PM",
             "05 : 30 PM"});
-            this.comboBox5.Location = new System.Drawing.Point(244, 253);
+            this.comboBox5.Location = new System.Drawing.Point(244, 195);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(147, 24);
             this.comboBox5.TabIndex = 119;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label13.Location = new System.Drawing.Point(3, 112);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(162, 32);
-            this.label13.TabIndex = 110;
-            this.label13.Text = "Working Days";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 333);
+            this.label1.Location = new System.Drawing.Point(3, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 32);
             this.label1.TabIndex = 129;
@@ -336,7 +325,7 @@ namespace Time_Table_Management_System
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label3.Location = new System.Drawing.Point(3, 179);
+            this.label3.Location = new System.Drawing.Point(3, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 32);
             this.label3.TabIndex = 130;
@@ -346,7 +335,7 @@ namespace Time_Table_Management_System
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label4.Location = new System.Drawing.Point(3, 250);
+            this.label4.Location = new System.Drawing.Point(3, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 32);
             this.label4.TabIndex = 131;
@@ -361,10 +350,10 @@ namespace Time_Table_Management_System
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataview);
+            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btndelete);
-            this.Controls.Add(this.btnadd);
             this.Controls.Add(this.label2);
             this.Name = "AddWorkingDays";
             this.Text = "AddWorkingDays";
@@ -421,7 +410,6 @@ namespace Time_Table_Management_System
         private Label label11;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label12;
-        private Label label13;
         private Label label1;
         private ComboBox comboBox5;
         private Label label3;

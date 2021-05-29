@@ -37,13 +37,13 @@ namespace Time_Table_Management_System
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnadd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -52,7 +52,7 @@ namespace Time_Table_Management_System
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(187, 112);
+            this.checkBox1.Location = new System.Drawing.Point(186, 112);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 21);
             this.checkBox1.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace Time_Table_Management_System
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(187, 175);
+            this.checkBox2.Location = new System.Drawing.Point(186, 175);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(85, 21);
             this.checkBox2.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace Time_Table_Management_System
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(187, 228);
+            this.checkBox3.Location = new System.Drawing.Point(186, 228);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(105, 21);
             this.checkBox3.TabIndex = 2;
@@ -82,7 +82,7 @@ namespace Time_Table_Management_System
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(187, 285);
+            this.checkBox4.Location = new System.Drawing.Point(186, 285);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(90, 21);
             this.checkBox4.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace Time_Table_Management_System
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(187, 345);
+            this.checkBox5.Location = new System.Drawing.Point(186, 345);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(69, 21);
             this.checkBox5.TabIndex = 4;
@@ -102,7 +102,7 @@ namespace Time_Table_Management_System
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(341, 112);
+            this.checkBox6.Location = new System.Drawing.Point(340, 112);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(87, 21);
             this.checkBox6.TabIndex = 5;
@@ -112,7 +112,7 @@ namespace Time_Table_Management_System
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(341, 175);
+            this.checkBox7.Location = new System.Drawing.Point(340, 175);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(78, 21);
             this.checkBox7.TabIndex = 6;
@@ -134,20 +134,6 @@ namespace Time_Table_Management_System
             this.dataGridView1.Size = new System.Drawing.Size(334, 220);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "EMP1",
-            "EMP2",
-            "EMP3",
-            "EMP4",
-            "EMP5"});
-            this.comboBox1.Location = new System.Drawing.Point(187, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 9;
             // 
             // btnadd
             // 
@@ -185,7 +171,7 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.43645F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.56355F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.checkBox2, 1, 2);
@@ -209,16 +195,6 @@ namespace Time_Table_Management_System
             this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 393);
             this.tableLayoutPanel1.TabIndex = 133;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 32);
-            this.label7.TabIndex = 106;
-            this.label7.Text = "Lecture ID";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -228,6 +204,26 @@ namespace Time_Table_Management_System
             this.label8.Size = new System.Drawing.Size(175, 63);
             this.label8.TabIndex = 108;
             this.label8.Text = "Select Working Days";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(45, 32);
+            this.label7.TabIndex = 106;
+            this.label7.Text = " ID";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "5"});
+            this.comboBox1.Location = new System.Drawing.Point(186, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 9;
             // 
             // Selectdays
             // 
@@ -259,12 +255,12 @@ namespace Time_Table_Management_System
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
     }
 }

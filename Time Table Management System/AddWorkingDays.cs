@@ -181,6 +181,11 @@ namespace Time_Table_Management_System
         {
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
     
