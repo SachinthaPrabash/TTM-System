@@ -33,22 +33,17 @@ namespace Time_Table_Management_System
 
         {
           
-          /*  if (textBox1.Text == "")*/
-            
+                
                 //validate
-                /*MessageBox.Show("Enter Employee id");*/
+              
                 if (comboBox1.Text == "") MessageBox.Show("Select No of Working Days ");
-                if (comboBox2.Text == "") MessageBox.Show("Working Time Per Dyas");
                 if (comboBox3.Text == "") MessageBox.Show("Select Start Time ");
                 if (comboBox4.Text == "") MessageBox.Show("Select End Time ");
 
            
            else { 
-
-
-                /*AddWorkingDaysModel.employeeId = int.Parse(textBox1.Text);*/
+                               
                 AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
-                AddWorkingDaysModel.WorkingTimePerDay = comboBox2.Text;
                 AddWorkingDaysModel.startTime = comboBox3.Text;
                 AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
@@ -61,7 +56,6 @@ namespace Time_Table_Management_System
                 //get value
                /* textBox1.Text = "";*/
                 comboBox1.Text = "";
-                comboBox2.Text = "";
                 comboBox3.Text = "";
                 comboBox4.Text = "";
 
@@ -83,9 +77,8 @@ namespace Time_Table_Management_System
             dataview.DataSource = addcontrol.getworkingdaysvalues();
 
             //get value
-            textBox1.Text = "";
+            
             comboBox1.Text = "";
-            comboBox2.Text = "";
             comboBox3.Text = "";
             comboBox4.Text = "";
 
@@ -95,17 +88,14 @@ namespace Time_Table_Management_System
         private void btnupdate_Click(object sender, EventArgs e)
         {
             //validate
-            if (textBox1.Text == "") MessageBox.Show("Enter Employye id");     
-            if (comboBox2.Text == "") MessageBox.Show("Working Time Per Dyas");
+            
             if (comboBox3.Text == "") MessageBox.Show("Select No of Working Days ");
             if (comboBox4.Text == "") MessageBox.Show("Select No of Working Days ");
 
            
 
             AddWorkingDaysModel.id = int.Parse(Aid.Text);
-            AddWorkingDaysModel.employeeId = int.Parse(textBox1.Text);
             AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
-            AddWorkingDaysModel.WorkingTimePerDay = comboBox2.Text;
             AddWorkingDaysModel.startTime = comboBox3.Text;
             AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
@@ -118,9 +108,7 @@ namespace Time_Table_Management_System
 
             //get value
             Aid.Text = "";
-            textBox1.Text = "";
             comboBox1.Text = "";
-            comboBox2.Text = "";
             comboBox3.Text = "";
             comboBox4.Text = "";
 
@@ -145,9 +133,7 @@ namespace Time_Table_Management_System
 
                 DataGridViewRow row = this.dataview.Rows[e.RowIndex];
                 
-                textBox1.Text = row.Cells["EmployeeId"].Value.ToString();
                 comboBox1.Text = row.Cells["NoOfWorkingDays"].Value.ToString();
-                comboBox2.Text = row.Cells["WorkingTime"].Value.ToString();
                 comboBox3.Text = row.Cells["StratTime"].Value.ToString();
                 comboBox5.Text = row.Cells["EndTime"].Value.ToString();
                 comboBox4.Text = row.Cells["TimeSlot"].Value.ToString();
@@ -187,6 +173,11 @@ namespace Time_Table_Management_System
         }
 
         private void textBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }

@@ -29,7 +29,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-           string query = "INSERT INTO WorkingDays(EmployeeId,NoOfWorkingDays,WorkingTime,StratTime,EndTime,TimeSlot)" + "VALUES ((select lid from lecture where lecturerName = '"+workingMod.employeeId+"' ),'" + workingMod.noOfWorkingDays + "','" + workingMod.WorkingTimePerDay + "','" + workingMod.startTime + "','" + workingMod.endTime + "','" + workingMod.timeSlot + "')";
+           string query = "INSERT INTO WorkingDays(NoOfWorkingDays,StratTime,EndTime,TimeSlot)" + "VALUES ('" + workingMod.noOfWorkingDays + "','" + workingMod.startTime + "','" + workingMod.endTime + "','" + workingMod.timeSlot + "')";
             
             SqlCommand cmd = new SqlCommand(query, con);
 
@@ -59,24 +59,6 @@ namespace Time_Table_Management_System.Controller
             return dtbuilding;
         }
 
-
-        /*
-        public DataTable getdaysvalues()
-        {
-            if (con.State.ToString() != "Open")
-            {
-                con.Open();
-            }
-
-            DataTable dtbuilding = new DataTable();
-
-            string query = "select * from Days";
-
-            SqlDataReader dr1 = new SqlCommand(query, con).ExecuteReader();
-
-            dtbuilding.Load(dr1);
-            return dtbuilding;
-        }*/
 
         //Delete queries
 
@@ -112,7 +94,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-            string query = "update WorkingDays set EmployeeId =(select lid from lecture where lecturerName='"+workingMod.employeeId+"'),WorkingTime ='" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',,StratTime='" + workingMod.endTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
+            string query = "update WorkingDays set WorkingTime =('" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',,StratTime='" + workingMod.endTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
 
             SqlCommand com = new SqlCommand(query, con);
             com.ExecuteNonQuery();
