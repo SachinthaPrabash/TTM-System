@@ -29,7 +29,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-           string query = "INSERT INTO WorkingDays(EmployeeId,NoOfWorkingDays,WorkingTime,StratTime,TimeSlot)" + "VALUES ((select lid from lecture where lecturerName = '"+workingMod.employeeId+"' ),'" + workingMod.noOfWorkingDays + "','" + workingMod.WorkingTimePerDay + "','" + workingMod.startTime + "','" + workingMod.timeSlot + "')";
+           string query = "INSERT INTO WorkingDays(EmployeeId,NoOfWorkingDays,WorkingTime,StratTime,EndTime,TimeSlot)" + "VALUES ((select lid from lecture where lecturerName = '"+workingMod.employeeId+"' ),'" + workingMod.noOfWorkingDays + "','" + workingMod.WorkingTimePerDay + "','" + workingMod.startTime + "','" + workingMod.endTime + "','" + workingMod.timeSlot + "')";
             
             SqlCommand cmd = new SqlCommand(query, con);
 
@@ -60,7 +60,7 @@ namespace Time_Table_Management_System.Controller
         }
 
 
-
+        /*
         public DataTable getdaysvalues()
         {
             if (con.State.ToString() != "Open")
@@ -76,7 +76,7 @@ namespace Time_Table_Management_System.Controller
 
             dtbuilding.Load(dr1);
             return dtbuilding;
-        }
+        }*/
 
         //Delete queries
 
@@ -112,7 +112,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-            string query = "update WorkingDays set EmployeeId =(select lid from lecture where lecturerName='"+workingMod.employeeId+"'),WorkingTime ='" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
+            string query = "update WorkingDays set EmployeeId =(select lid from lecture where lecturerName='"+workingMod.employeeId+"'),WorkingTime ='" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',,StratTime='" + workingMod.endTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
 
             SqlCommand com = new SqlCommand(query, con);
             com.ExecuteNonQuery();

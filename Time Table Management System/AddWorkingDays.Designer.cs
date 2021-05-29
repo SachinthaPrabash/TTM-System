@@ -58,6 +58,8 @@ namespace Time_Table_Management_System
             this.tLMDataSet1 = new Time_Table_Management_System.TLMDataSet1();
             this.lectureTableAdapter = new Time_Table_Management_System.TLMDataSet1TableAdapters.lectureTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
@@ -79,7 +81,7 @@ namespace Time_Table_Management_System
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(66, 64);
+            this.label7.Location = new System.Drawing.Point(38, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 17);
             this.label7.TabIndex = 89;
@@ -106,7 +108,7 @@ namespace Time_Table_Management_System
             "08 : 30 AM",
             "12 : 30 PM",
             "05 : 30 PM"});
-            this.comboBox3.Location = new System.Drawing.Point(180, 340);
+            this.comboBox3.Location = new System.Drawing.Point(178, 302);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 86;
@@ -122,7 +124,7 @@ namespace Time_Table_Management_System
             "08 Hours",
             "09 Hours",
             "10 Hour"});
-            this.comboBox2.Location = new System.Drawing.Point(180, 293);
+            this.comboBox2.Location = new System.Drawing.Point(180, 246);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(99, 24);
             this.comboBox2.TabIndex = 85;
@@ -150,7 +152,7 @@ namespace Time_Table_Management_System
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(82, 340);
+            this.label5.Location = new System.Drawing.Point(76, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 80;
@@ -159,7 +161,7 @@ namespace Time_Table_Management_System
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 279);
+            this.label4.Location = new System.Drawing.Point(18, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 17);
             this.label4.TabIndex = 79;
@@ -168,7 +170,7 @@ namespace Time_Table_Management_System
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 209);
+            this.label3.Location = new System.Drawing.Point(53, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 78;
@@ -264,7 +266,7 @@ namespace Time_Table_Management_System
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(180, 209);
+            this.button1.Location = new System.Drawing.Point(179, 176);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 34);
             this.button1.TabIndex = 113;
@@ -303,9 +305,9 @@ namespace Time_Table_Management_System
             this.textBox1.DataSource = this.lectureBindingSource;
             this.textBox1.DisplayMember = "lecturerName";
             this.textBox1.FormattingEnabled = true;
-            this.textBox1.Location = new System.Drawing.Point(192, 61);
+            this.textBox1.Location = new System.Drawing.Point(180, 65);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(99, 24);
+            this.textBox1.Size = new System.Drawing.Size(120, 24);
             this.textBox1.TabIndex = 116;
             this.textBox1.ValueMember = "lecturerName";
             // 
@@ -333,12 +335,35 @@ namespace Time_Table_Management_System
             this.panel1.Size = new System.Drawing.Size(1091, 178);
             this.panel1.TabIndex = 117;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(76, 352);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 17);
+            this.label10.TabIndex = 118;
+            this.label10.Text = "End Time";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "08 : 30 AM",
+            "12 : 30 PM",
+            "05 : 30 PM"});
+            this.comboBox5.Location = new System.Drawing.Point(179, 352);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 24);
+            this.comboBox5.TabIndex = 119;
+            // 
             // AddWorkingDays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(1091, 639);
+            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -416,5 +441,7 @@ namespace Time_Table_Management_System
         private BindingSource lectureBindingSource;
         private TLMDataSet1TableAdapters.lectureTableAdapter lectureTableAdapter;
         private Panel panel1;
+        private Label label10;
+        private ComboBox comboBox5;
     }
 }
