@@ -53,11 +53,11 @@ namespace Time_Table_Management_System
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
@@ -86,7 +86,7 @@ namespace Time_Table_Management_System
             "02 Hours",
             "03 Hours",
             "04 Hours"});
-            this.comboBox4.Location = new System.Drawing.Point(245, 336);
+            this.comboBox4.Location = new System.Drawing.Point(244, 336);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(240, 24);
             this.comboBox4.TabIndex = 87;
@@ -98,7 +98,7 @@ namespace Time_Table_Management_System
             "08 : 30 AM",
             "12 : 30 PM",
             "05 : 30 PM"});
-            this.comboBox3.Location = new System.Drawing.Point(245, 182);
+            this.comboBox3.Location = new System.Drawing.Point(244, 182);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(170, 24);
             this.comboBox3.TabIndex = 86;
@@ -149,7 +149,7 @@ namespace Time_Table_Management_System
             "5",
             "6",
             "7"});
-            this.comboBox1.Location = new System.Drawing.Point(245, 62);
+            this.comboBox1.Location = new System.Drawing.Point(244, 62);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 24);
             this.comboBox1.TabIndex = 96;
@@ -173,7 +173,7 @@ namespace Time_Table_Management_System
             // 
             // Aid
             // 
-            this.Aid.Location = new System.Drawing.Point(245, 3);
+            this.Aid.Location = new System.Drawing.Point(244, 3);
             this.Aid.Name = "Aid";
             this.Aid.Size = new System.Drawing.Size(100, 22);
             this.Aid.TabIndex = 99;
@@ -183,7 +183,7 @@ namespace Time_Table_Management_System
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Location = new System.Drawing.Point(245, 115);
+            this.button1.Location = new System.Drawing.Point(244, 115);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 42);
             this.button1.TabIndex = 113;
@@ -300,6 +300,18 @@ namespace Time_Table_Management_System
             this.label12.Text = "No Of Working Days";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "08 : 30 AM",
+            "12 : 30 PM",
+            "05 : 30 PM"});
+            this.comboBox5.Location = new System.Drawing.Point(244, 253);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(147, 24);
+            this.comboBox5.TabIndex = 119;
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -339,18 +351,6 @@ namespace Time_Table_Management_System
             this.label4.Size = new System.Drawing.Size(169, 32);
             this.label4.TabIndex = 131;
             this.label4.Text = "End Time : PM";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "08 : 30 AM",
-            "12 : 30 PM",
-            "05 : 30 PM"});
-            this.comboBox5.Location = new System.Drawing.Point(245, 253);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(147, 24);
-            this.comboBox5.TabIndex = 119;
             // 
             // AddWorkingDays
             // 
