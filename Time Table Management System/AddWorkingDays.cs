@@ -149,6 +149,7 @@ namespace Time_Table_Management_System
                 comboBox1.Text = row.Cells["NoOfWorkingDays"].Value.ToString();
                 comboBox2.Text = row.Cells["WorkingTime"].Value.ToString();
                 comboBox3.Text = row.Cells["StratTime"].Value.ToString();
+                comboBox5.Text = row.Cells["EndTime"].Value.ToString();
                 comboBox4.Text = row.Cells["TimeSlot"].Value.ToString();
 
             }
@@ -173,6 +174,21 @@ namespace Time_Table_Management_System
 
             }
             
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Aid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

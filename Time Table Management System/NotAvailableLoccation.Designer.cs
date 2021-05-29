@@ -106,7 +106,7 @@ namespace Time_Table_Management_System
             this.dataviewNL.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataviewNL.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataviewNL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataviewNL.Location = new System.Drawing.Point(459, 177);
+            this.dataviewNL.Location = new System.Drawing.Point(466, 185);
             this.dataviewNL.Name = "dataviewNL";
             this.dataviewNL.RowHeadersWidth = 51;
             this.dataviewNL.RowTemplate.Height = 24;

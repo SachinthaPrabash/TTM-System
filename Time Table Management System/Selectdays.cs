@@ -108,6 +108,9 @@ namespace Time_Table_Management_System
             dataGridView1.DataSource = addcontrol.getdaysvalues();
         }
 
-       
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
