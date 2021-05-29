@@ -53,10 +53,10 @@ namespace Time_Table_Management_System
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
@@ -85,7 +85,7 @@ namespace Time_Table_Management_System
             "02 Hours",
             "03 Hours",
             "04 Hours"});
-            this.comboBox4.Location = new System.Drawing.Point(244, 272);
+            this.comboBox4.Location = new System.Drawing.Point(244, 279);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(240, 24);
             this.comboBox4.TabIndex = 87;
@@ -97,7 +97,7 @@ namespace Time_Table_Management_System
             "08 : 30 AM",
             "12 : 30 PM",
             "05 : 30 PM"});
-            this.comboBox3.Location = new System.Drawing.Point(244, 123);
+            this.comboBox3.Location = new System.Drawing.Point(244, 126);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(170, 24);
             this.comboBox3.TabIndex = 86;
@@ -148,7 +148,7 @@ namespace Time_Table_Management_System
             "5",
             "6",
             "7"});
-            this.comboBox1.Location = new System.Drawing.Point(244, 66);
+            this.comboBox1.Location = new System.Drawing.Point(244, 68);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(195, 24);
             this.comboBox1.TabIndex = 96;
@@ -292,40 +292,18 @@ namespace Time_Table_Management_System
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label12.Location = new System.Drawing.Point(3, 63);
+            this.label12.Location = new System.Drawing.Point(3, 65);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(234, 32);
             this.label12.TabIndex = 108;
             this.label12.Text = "No Of Working Days";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "08 : 30 AM",
-            "12 : 30 PM",
-            "05 : 30 PM"});
-            this.comboBox5.Location = new System.Drawing.Point(244, 195);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(147, 24);
-            this.comboBox5.TabIndex = 119;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 269);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 32);
-            this.label1.TabIndex = 129;
-            this.label1.Text = "Time Slot";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label3.Location = new System.Drawing.Point(3, 120);
+            this.label3.Location = new System.Drawing.Point(3, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 32);
             this.label3.TabIndex = 130;
@@ -335,11 +313,33 @@ namespace Time_Table_Management_System
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.label4.Location = new System.Drawing.Point(3, 192);
+            this.label4.Location = new System.Drawing.Point(3, 197);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 32);
             this.label4.TabIndex = 131;
             this.label4.Text = "End Time : PM";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "08 : 30 AM",
+            "12 : 30 PM",
+            "05 : 30 PM"});
+            this.comboBox5.Location = new System.Drawing.Point(244, 200);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(147, 24);
+            this.comboBox5.TabIndex = 119;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 32);
+            this.label1.TabIndex = 129;
+            this.label1.Text = "Time Slot";
             // 
             // AddWorkingDays
             // 

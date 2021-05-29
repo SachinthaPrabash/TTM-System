@@ -38,13 +38,15 @@ namespace Time_Table_Management_System
               
                 if (comboBox1.Text == "") MessageBox.Show("Select No of Working Days ");
                 if (comboBox3.Text == "") MessageBox.Show("Select Start Time ");
-                if (comboBox4.Text == "") MessageBox.Show("Select End Time ");
+            if (comboBox5.Text == "") MessageBox.Show("Select End Time ");
+            if (comboBox4.Text == "") MessageBox.Show("Select Timeslot");
 
            
            else { 
                                
                 AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
                 AddWorkingDaysModel.startTime = comboBox3.Text;
+                AddWorkingDaysModel.endtime = comboBox5.Text;
                 AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
                 //insert to db
@@ -57,6 +59,7 @@ namespace Time_Table_Management_System
                /* textBox1.Text = "";*/
                 comboBox1.Text = "";
                 comboBox3.Text = "";
+                comboBox5.Text = "";
                 comboBox4.Text = "";
 
             }
@@ -80,6 +83,7 @@ namespace Time_Table_Management_System
             
             comboBox1.Text = "";
             comboBox3.Text = "";
+            comboBox5.Text = "";
             comboBox4.Text = "";
 
         }
@@ -87,16 +91,20 @@ namespace Time_Table_Management_System
         //update button
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            //validate
-            
-            if (comboBox3.Text == "") MessageBox.Show("Select No of Working Days ");
-            if (comboBox4.Text == "") MessageBox.Show("Select No of Working Days ");
 
-           
+            //validate
+
+            if (comboBox1.Text == "") MessageBox.Show("Select No of Working Days ");
+            if (comboBox3.Text == "") MessageBox.Show("Select Start Time ");
+            if (comboBox5.Text == "") MessageBox.Show("Select End Time ");
+            if (comboBox4.Text == "") MessageBox.Show("Select Timeslot");
+
+
 
             AddWorkingDaysModel.id = int.Parse(Aid.Text);
             AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
             AddWorkingDaysModel.startTime = comboBox3.Text;
+            AddWorkingDaysModel.endTime = comboBox5.Text;
             AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
             //update db
@@ -110,6 +118,7 @@ namespace Time_Table_Management_System
             Aid.Text = "";
             comboBox1.Text = "";
             comboBox3.Text = "";
+            comboBox5.Text = "";
             comboBox4.Text = "";
 
 
@@ -147,7 +156,7 @@ namespace Time_Table_Management_System
         {
             Selectdays Selectdays = new Selectdays();
             Selectdays.Show();
-          
+            dataGridViewdays.DataSource = addcontrold.getdaysvalues();
         }
 
         private void dataGridViewdays_CellContentClick(object sender, DataGridViewCellEventArgs e)
