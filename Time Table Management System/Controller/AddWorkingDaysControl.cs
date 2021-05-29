@@ -29,20 +29,20 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-            string query = "INSERT INTO WorkingDays(EmployeeId,NoOfWorkingDays,WorkingDays,WorkingTime,StratTime,TimeSlot)" + "VALUES ('" + workingMod.employeeId + "','" + workingMod.noOfWorkingDays + "','" + workingMod.workingDays + "','" + workingMod.WorkingTimePerDay + "','" + workingMod.startTime + "','" + workingMod.timeSlot + "')";
-
+           string query = "INSERT INTO WorkingDays(EmployeeId,NoOfWorkingDays,WorkingTime,StratTime,TimeSlot)" + "VALUES ((select lid from lecture where lecturerName = '"+workingMod.employeeId+"' ),'" + workingMod.noOfWorkingDays + "','" + workingMod.WorkingTimePerDay + "','" + workingMod.startTime + "','" + workingMod.timeSlot + "')";
+            
             SqlCommand cmd = new SqlCommand(query, con);
 
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Successfully Inserted");
-
-            con.Close();
+           
+            con.Close(); 
         }
 
         //Retrive queries
 
-        public DataTable getworkingdaysvalues()
+        public DataTable getworkingdaysvalues( )
         {
             if (con.State.ToString() != "Open")
             {
@@ -59,6 +59,24 @@ namespace Time_Table_Management_System.Controller
             return dtbuilding;
         }
 
+
+
+        public DataTable getdaysvalues()
+        {
+            if (con.State.ToString() != "Open")
+            {
+                con.Open();
+            }
+
+            DataTable dtbuilding = new DataTable();
+
+            string query = "select * from Days";
+
+            SqlDataReader dr1 = new SqlCommand(query, con).ExecuteReader();
+
+            dtbuilding.Load(dr1);
+            return dtbuilding;
+        }
 
         //Delete queries
 
@@ -94,7 +112,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-            string query = "update WorkingDays set EmployeeId ='" + workingMod.employeeId + "', NoOfWorkingDays='" + workingMod.noOfWorkingDays + "',WorkingDays='" + workingMod.workingDays + "',WorkingTime='" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
+            string query = "update WorkingDays set EmployeeId =(select lid from lecture where lecturerName='"+workingMod.employeeId+"'),WorkingTime ='" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
 
             SqlCommand com = new SqlCommand(query, con);
             com.ExecuteNonQuery();
@@ -105,5 +123,7 @@ namespace Time_Table_Management_System.Controller
 
         }
 
+
+      
     }
 }

@@ -37,7 +37,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con1.Open();
             }
-            string query = "insert into NotAvailableTime  values('" + add.date + "','" + add.lecturerName + "','" + add.group + "','" + add.subGroup + "','" + add.sessionID + "','" + add.startTime + "','" + add.endTime + "')";
+            string query = "insert into NotAvailableTime  values('" + add.date + "',(select lid from lecture where lecturerName='" + add.lecturerName + "'),(select StudentgropID from StudentGroup where GroupID='" + add.group + "'),(select StudentgropID from StudentGroup where SubGroupID='" + add.subGroup + "'),(select sesId from session where sesId='"+add.sessionID+"'),'" + add.startTime + "','" + add.endTime + "')";
 
             SqlCommand com = new SqlCommand(query, con1);
             int ret = Execution(com);
@@ -104,7 +104,7 @@ namespace Time_Table_Management_System.Controller
                 con1.Open();
             }
 
-            string query = "update NotAvailableTime set Date='" + update.date + "',LecturerName='" + update.lecturerName + "',[Group] ='" + update.group + "', SubGroup ='" + update.subGroup + "',SessionID ='" + update.sessionID + "',StartTime = '" + update.startTime + "',EndTime='" + update.endTime + "' where Id = '" + update.id + "' ";
+            string query = "update NotAvailableTime set Date='" + update.date + "',LecturerName=(select lid from lecture where lecturerName='" + update.lecturerName + "'),[Group] =(select StudentgropID from StudentGroup where GroupID='" + update.group + "'), SubGroup =(select StudentgropID from StudentGroup where SubGroupID='" + update.subGroup + "'),SessionID =(select sesId from session where sesId='" + update.sessionID+"'),StartTime = '" + update.startTime + "',EndTime='" + update.endTime + "' where Id = '" + update.id + "' ";
 
 
             SqlCommand com = new SqlCommand(query, con1);

@@ -126,6 +126,7 @@
     <Compile Include="Controller\AddWorkingDaysControl.cs" />
     <Compile Include="Controller\AssignRoomsforgroupControler.cs" />
     <Compile Include="Controller\AssignRoomsforSubjectControl.cs" />
+    <Compile Include="Controller\DaysControl.cs" />
     <Compile Include="Controller\ManageSessionControl.cs" />
     <Compile Include="Controller\NotAvailableLocationControl.cs" />
     <Compile Include="Controller\NotAvailableTimeControl.cs" />
@@ -221,6 +222,7 @@
     <Compile Include="ManageTags.designer.cs">
       <DependentUpon>ManageTags.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\addDaysModel.cs" />
     <Compile Include="Model\addLecturerModel.cs" />
     <Compile Include="Model\addSessionModel.cs" />
     <Compile Include="Model\addSubjectModel.cs" />
@@ -255,6 +257,12 @@
     </Compile>
     <Compile Include="parallel.designer.cs">
       <DependentUpon>parallel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selectdays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selectdays.designer.cs">
+      <DependentUpon>Selectdays.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionTA.cs">
       <SubType>Form</SubType>
@@ -390,6 +398,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="parallel.resx">
       <DependentUpon>parallel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selectdays.resx">
+      <DependentUpon>Selectdays.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SessionTA.resx">
       <DependentUpon>SessionTA.cs</DependentUpon>

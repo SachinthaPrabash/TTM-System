@@ -37,7 +37,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con1.Open();
             }
-            string query = "insert into NotAvailableLocation  values('"  +add.date + "','" + add.loccation + "','" + add.room+ "','" + add.startTime + "','" + add.endTime + "')";
+            string query = "insert into NotAvailableLocation  values('"  +add.date + "',(select locationID from locationTB where locationName='"+add.loccation+ "'),(select roomID from roomTB where roomName='"+add.room+"'),'" + add.startTime + "','" + add.endTime + "')";
 
             SqlCommand com = new SqlCommand(query, con1);
             int ret = Execution(com);
@@ -104,7 +104,7 @@ namespace Time_Table_Management_System.Controller
                 con1.Open();
             }
             
-            string query = "update NotAvailableLocation set Date='" + update.date + "',Loccation='" + update.loccation + "',Room ='" + update.room + "', StartTime ='" + update.startTime + "',EndTime ='" + update.endTime + "' where Id = '" + update.id + "' ";
+            string query = "update NotAvailableLocation set Date='" + update.date + "',Loccation=(select locationID from locationTB where locationName='" + update.loccation + "'),Room =(select roomID from roomTB where roomName='" + update.room + "'), StartTime ='" + update.startTime + "',EndTime ='" + update.endTime + "' where Id = '" + update.id + "' ";
 
             SqlCommand com = new SqlCommand(query, con1);
             int ret = Execution(com);

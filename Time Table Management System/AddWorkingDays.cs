@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Time_Table_Management_System.Controller;
 using Time_Table_Management_System.Model;
 using Time_Table_Management_System.DBConnection;
+using System.Collections;
+using System.Data.SqlClient;
 
 namespace Time_Table_Management_System
 {
@@ -22,171 +24,156 @@ namespace Time_Table_Management_System
         AddWorkingDaysControl addcontrol = new AddWorkingDaysControl();
         AddWorkingDaysModel AddWorkingDaysModel = new AddWorkingDaysModel();
 
+        DaysControl addcontrold = new DaysControl();
+        addDaysModel addDaysModeld = new addDaysModel();
 
 
+        //add button 
         private void btnadd_Click_1(object sender, EventArgs e)
+
         {
-            if (textBox1.Text == "")
-            {
-                MessageBox.Show("Enter Employee id");
+          
+          /*  if (textBox1.Text == "")*/
+            
+                //validate
+                /*MessageBox.Show("Enter Employee id");*/
                 if (comboBox1.Text == "") MessageBox.Show("Select No of Working Days ");
-                if (comboBox2.Text == "") MessageBox.Show("Working Days ");
-                if (comboBox3.Text == "") MessageBox.Show("Working Time Per Dyas");
-                if (comboBox4.Text == "") MessageBox.Show("Select No of Working Days ");
-                if (comboBox5.Text == "") MessageBox.Show("Select No of Working Days ");
+                if (comboBox2.Text == "") MessageBox.Show("Working Time Per Dyas");
+                if (comboBox3.Text == "") MessageBox.Show("Select Start Time ");
+                if (comboBox4.Text == "") MessageBox.Show("Select End Time ");
+
+           
+           else { 
 
 
-
-
-            }
-            else
-            {
-                AddWorkingDaysModel.employeeId = int.Parse(textBox1.Text);
+                /*AddWorkingDaysModel.employeeId = int.Parse(textBox1.Text);*/
                 AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
-                AddWorkingDaysModel.workingDays = comboBox2.Text;
+                AddWorkingDaysModel.WorkingTimePerDay = comboBox2.Text;
+                AddWorkingDaysModel.startTime = comboBox3.Text;
+                AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
-                AddWorkingDaysModel.WorkingTimePerDay = comboBox3.Text;
-                AddWorkingDaysModel.startTime = comboBox4.Text;
-                AddWorkingDaysModel.timeSlot = comboBox5.Text;
-
-
+                //insert to db
                 addcontrol.insertaddWorkingDetails(AddWorkingDaysModel);
-
-
+                // page load
                 dataview.DataSource = addcontrol.getworkingdaysvalues();
+                dataGridViewdays.DataSource = addcontrold.getdaysvalues();
 
-                textBox1.Text = "";
+                //get value
+               /* textBox1.Text = "";*/
                 comboBox1.Text = "";
                 comboBox2.Text = "";
                 comboBox3.Text = "";
                 comboBox4.Text = "";
-                comboBox5.Text = "";
 
             }
 
+
+        
         }
 
+        //delete button
         private void btndelete_Click(object sender, EventArgs e)
         {
             int x = int.Parse(Aid.Text);
+
+            //delete from db
             addcontrol.deleteWorkingDetails(x);
             Aid.Text = "";
-
+            //page load
             dataview.DataSource = addcontrol.getworkingdaysvalues();
 
+            //get value
             textBox1.Text = "";
             comboBox1.Text = "";
             comboBox2.Text = "";
             comboBox3.Text = "";
             comboBox4.Text = "";
-            comboBox5.Text = "";
 
         }
 
+        //update button
         private void btnupdate_Click(object sender, EventArgs e)
         {
-
-
-            if (textBox1.Text == "") MessageBox.Show("Enter Employye id");
-            if (comboBox1.Text == "") MessageBox.Show("Select No of Working Days ");
-            if (comboBox2.Text == "") MessageBox.Show("Working Days ");
-            if (comboBox3.Text == "") MessageBox.Show("Working Time Per Dyas");
+            //validate
+            if (textBox1.Text == "") MessageBox.Show("Enter Employye id");     
+            if (comboBox2.Text == "") MessageBox.Show("Working Time Per Dyas");
+            if (comboBox3.Text == "") MessageBox.Show("Select No of Working Days ");
             if (comboBox4.Text == "") MessageBox.Show("Select No of Working Days ");
-            if (comboBox5.Text == "") MessageBox.Show("Select No of Working Days ");
+
+           
 
             AddWorkingDaysModel.id = int.Parse(Aid.Text);
             AddWorkingDaysModel.employeeId = int.Parse(textBox1.Text);
             AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
-            AddWorkingDaysModel.workingDays = comboBox2.Text;
+            AddWorkingDaysModel.WorkingTimePerDay = comboBox2.Text;
+            AddWorkingDaysModel.startTime = comboBox3.Text;
+            AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
-            AddWorkingDaysModel.WorkingTimePerDay = comboBox3.Text;
-            AddWorkingDaysModel.startTime = comboBox4.Text;
-            AddWorkingDaysModel.timeSlot = comboBox5.Text;
-
+            //update db
             addcontrol.updateworkingdaysDetails(AddWorkingDaysModel);
 
+            //page load
             dataview.DataSource = addcontrol.getworkingdaysvalues();
+            dataGridViewdays.DataSource = addcontrold.getdaysvalues();
 
+            //get value
             Aid.Text = "";
             textBox1.Text = "";
             comboBox1.Text = "";
             comboBox2.Text = "";
             comboBox3.Text = "";
             comboBox4.Text = "";
-            comboBox5.Text = "";
+
 
         }
 
 
-
+        //view page load
         private void AddWorkingDays_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'tLMDataSet1.lecture' table. You can move, or remove it, as needed.
             this.lectureTableAdapter.Fill(this.tLMDataSet1.lecture);
-
             dataview.DataSource = addcontrol.getworkingdaysvalues();
+            dataGridViewdays.DataSource = addcontrold.getdaysvalues();
+        }
+
+        //table view
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        { 
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = this.dataview.Rows[e.RowIndex];
+                
+                textBox1.Text = row.Cells["EmployeeId"].Value.ToString();
+                comboBox1.Text = row.Cells["NoOfWorkingDays"].Value.ToString();
+                comboBox2.Text = row.Cells["WorkingTime"].Value.ToString();
+                comboBox3.Text = row.Cells["StratTime"].Value.ToString();
+                comboBox4.Text = row.Cells["TimeSlot"].Value.ToString();
+
+            }
+
         }
 
 
-        private void label7_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            Selectdays Selectdays = new Selectdays();
+            Selectdays.Show();
           
         }
 
-        private void dataview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewdays_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                {
-                    if (e.RowIndex >= 0)
-                    {
 
-                        DataGridViewRow row = this.dataview.Rows[e.RowIndex];
-
-                        Aid.Text = row.Cells["WorkId"].Value.ToString();
-                        textBox1.Text = row.Cells["EmployeeId"].Value.ToString();
-                        comboBox1.Text = row.Cells["NoOfWorkingDays"].Value.ToString();
-                        comboBox2.Text = row.Cells["WorkingDays"].Value.ToString();
-                        comboBox3.Text = row.Cells["WorkingTime"].Value.ToString();
-                        comboBox4.Text = row.Cells["StratTime"].Value.ToString();
-                        comboBox5.Text = row.Cells["TimeSlot"].Value.ToString();
+                DataGridViewRow row = this.dataGridViewdays.Rows[e.RowIndex];
 
 
-
-
-                    }
-
-
-
-
-                }
             }
+            
         }
     }
-}
+    }
     
