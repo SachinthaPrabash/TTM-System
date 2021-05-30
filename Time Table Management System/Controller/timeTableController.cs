@@ -108,10 +108,7 @@ namespace Time_Table_Management_System.Controller
 
         public void sessionDuration()
         {
-            //lecturetosession --> sesid--> duration
-
-
-            
+            //lecturetosession --> sesid--> duration    
         }
 
 
@@ -123,15 +120,12 @@ namespace Time_Table_Management_System.Controller
 
             if (con.State.ToString() != "Open")
             {
-
-
                 con.Open();
-
             }
 
             DataTable gotLectureDet = new DataTable();
 
-            string query = "select distinct s.sesId,w.WorkingDays,s.lec1,sg.SubGroupID,s.duration,r.roomname from WorkingDays w,session s, lecture l,StudentGroup sg, roomTB r,sessionForRoom sr where s.lec1 = l.lid and sr.sesID = s.sesId and sr.roomname = r.roomID and w.EmployeeId = l.lid and sg.StudentgropID = s.group_no and s.lec1 = '"+lec+"' ";
+            string query = "select distinct s.sesId,l.lecturerName,sg.SubGroupID,s.duration,r.roomname,lo.locationName from WorkingDays w,session s, lecture l,StudentGroup sg, roomTB r,sessionForRoom sr, locationTB lo where s.lec1 = l.lid and sr.sesID = s.sesId and lo.locationID = r.locationID and sr.roomname = r.roomID and sg.StudentgropID = s.group_no and s.lec1 = '"+lec+"' ";
             SqlDataReader data = new SqlCommand(query, con).ExecuteReader();
 
 

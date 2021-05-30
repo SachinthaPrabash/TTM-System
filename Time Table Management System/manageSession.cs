@@ -127,12 +127,11 @@ namespace Time_Table_Management_System
 
             sessionId.Text = subjectView.SelectedRows[0].Cells[0].Value.ToString();
             lec_1.Text = subjectView.SelectedRows[0].Cells[1].Value.ToString();
-            lec_2.Text = subjectView.SelectedRows[0].Cells[2].Value.ToString();
-            lec1_tag.Text = subjectView.SelectedRows[0].Cells[3].Value.ToString();
-            group.Text = subjectView.SelectedRows[0].Cells[4].Value.ToString();
-            subject.Text = subjectView.SelectedRows[0].Cells[5].Value.ToString();
-            no_of_student.Text = subjectView.SelectedRows[0].Cells[6].Value.ToString();
-            duration.Text = subjectView.SelectedRows[0].Cells[7].Value.ToString();
+            lec1_tag.Text = subjectView.SelectedRows[0].Cells[2].Value.ToString();
+            group.Text = subjectView.SelectedRows[0].Cells[3].Value.ToString();
+            subject.Text = subjectView.SelectedRows[0].Cells[4].Value.ToString();
+            no_of_student.Text = subjectView.SelectedRows[0].Cells[5].Value.ToString();
+            duration.Text = subjectView.SelectedRows[0].Cells[6].Value.ToString();
 
         }
 

@@ -62,14 +62,14 @@ namespace Time_Table_Management_System.Controller
 
         //Delete queries
 
-        public void deleteWorkingDetails(int id)
+        public void deleteWorkingDetails(string id)
         {
             if (con.State.ToString() != "Open")
             {
                 con.Open();
             }
 
-            string query = "DELETE FROM WorkingDays WHERE WorkId= '" + id + "'";
+            string query = "DELETE FROM WorkingDays WHERE WorkId= '" + id + "' ";
 
             SqlCommand com = new SqlCommand(query, con);
 
@@ -94,7 +94,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-            string query = "update WorkingDays set WorkingTime =('" + workingMod.WorkingTimePerDay + "',StratTime='" + workingMod.startTime + "',,StratTime='" + workingMod.endTime + "',TimeSlot='" + workingMod.timeSlot + "' where WorkId = '" + workingMod.id + "' ";
+            string query = "update WorkingDays set NoOfWorkingDays ='" + workingMod.noOfWorkingDays + "',StratTime='" + workingMod.startTime + "', EndTime ='" + workingMod.endTime + "',TimeSlot='" + workingMod.timeSlot + "'  where WorkId = '" + workingMod.id + "' ";
 
             SqlCommand com = new SqlCommand(query, con);
             com.ExecuteNonQuery();

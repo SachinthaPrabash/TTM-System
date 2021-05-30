@@ -9,10 +9,10 @@ namespace Time_Table_Management_System.Model
     class AddWorkingDaysModel
     {
         public int id;
-        public int employeeId;
+       
         public int noOfWorkingDays;
         public string endTime;
-        public string WorkingTimePerDay;
+
         public string startTime;
         public string timeSlot;
     }

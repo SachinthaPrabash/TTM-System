@@ -38,7 +38,7 @@ namespace Time_Table_Management_System.Controller
             {
                 con.Open();
             }
-            string query = "insert into session values((select lid from lecture where lecturerName='"+add.lec1+ "'),(select lid from lecture where lecturerName='" + add.lec2 + "'),(select TagID from TagTB where TagName='" + add.lec1_Tag + "'),(select StudentgropID from StudentGroup where SubGroupID='" + add.group_no + "'),(select sub_id from subject where sub_name='" + add.subject_name + "'),'" + add.noOfStudent + "','" + add.duration + "')";
+            string query = "insert into session values((select lid from lecture where lecturerName='"+add.lec1+ "'),(select lid from lecture where lecturerName='" + add.lec2 + "'),(select TagID from TagTB where TagName='" + add.lec1_Tag + "'),(select StudentgropID from StudentGroup where SubGroupID='" + add.group_no + "'),'" + add.subject_name + "','" + add.noOfStudent + "','" + add.duration + "')";
 
             SqlCommand com = new SqlCommand(query, con);
             int ret = Execution(com);
@@ -63,7 +63,7 @@ namespace Time_Table_Management_System.Controller
 
             DataTable gotSessionDet = new DataTable();
 
-            string query = "select s.sesId,l.lecturerName,l2.lecturerName,t.TagName,sg.SubGroupID,sb.sub_name,s.noOfStudent,s.duration  from session s,lecture l,lecture l2, TagTB t,StudentGroup sg, subject sb where s.lec1 = l.lid and s.lec2 = l2.lid and s.lec1_Tag = t.TagID and s.group_no = sg.StudentgropID and s.subject_name = sb.sub_id";
+            string query = "select distinct s.sesId,l.lecturerName,t.TagName,sg.SubGroupID,s.subject_name,s.noOfStudent,s.duration from session s,lecture l, lecture l2, TagTB t, StudentGroup sg, subject sb where s.lec1 = l.lid and s.lec1_Tag = t.TagID and s.group_no = sg.StudentgropID";
             SqlDataReader data = new SqlCommand(query, con).ExecuteReader();
 
 
@@ -103,7 +103,7 @@ namespace Time_Table_Management_System.Controller
                 if (con.State.ToString() != "Open")
                 {
                     con.Open();
-                    using (SqlCommand command = new SqlCommand("update session set lec1=(select lid from lecture where lecturerName='"+lec_1+"'), lec2 = (select lid from lecture where lecturerName = '"+lec_2+"'),lec1_Tag = (select TagID from TagTB where TagName = '"+lec_tag_1+"'),group_no = (select StudentgropID from StudentGroup where SubGroupID = '"+groupno+"'),subject_name = (select sub_id from subject where sub_name = '"+subjectname+"'),noOfStudent = '"+noOfStudent+"',duration = '"+duration+ "' where sesId='"+ sessionId + "' ", con))
+                    using (SqlCommand command = new SqlCommand("update session set lec1=(select lid from lecture where lecturerName='"+lec_1+"'), lec2 = (select lid from lecture where lecturerName = '"+lec_2+"'),lec1_Tag = (select TagID from TagTB where TagName = '"+lec_tag_1+"'),group_no = (select StudentgropID from StudentGroup where SubGroupID = '"+groupno+"'),subject_name ='"+subjectname+"',noOfStudent = '"+noOfStudent+"',duration = '"+duration+ "' where sesId='"+ sessionId + "' ", con))
                     {
                         command.ExecuteNonQuery();
                     }

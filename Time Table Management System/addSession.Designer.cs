@@ -51,6 +51,7 @@ namespace Time_Table_Management_System
             this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet4 = new Time_Table_Management_System.TLMDataSet4();
             this.lect_2 = new System.Windows.Forms.ComboBox();
+            this.lectureBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.group = new System.Windows.Forms.ComboBox();
             this.studentGroupBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tLMDataSet2 = new Time_Table_Management_System.TLMDataSet2();
@@ -69,20 +70,19 @@ namespace Time_Table_Management_System
             this.studentGroupTableAdapter = new Time_Table_Management_System.TLMDataSet2TableAdapters.StudentGroupTableAdapter();
             this.tagTBTableAdapter = new Time_Table_Management_System.TLMDataSet3TableAdapters.TagTBTableAdapter();
             this.subjectTableAdapter = new Time_Table_Management_System.TLMDataSet4TableAdapters.subjectTableAdapter();
-            this.lectureBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tagTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentGroupBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSetBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -129,6 +129,7 @@ namespace Time_Table_Management_System
             this.label9.Size = new System.Drawing.Size(115, 58);
             this.label9.TabIndex = 63;
             this.label9.Text = "Selected Lecturers";
+            this.label9.Visible = false;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
@@ -200,6 +201,7 @@ namespace Time_Table_Management_System
             this.selected_lec.Name = "selected_lec";
             this.selected_lec.Size = new System.Drawing.Size(232, 38);
             this.selected_lec.TabIndex = 57;
+            this.selected_lec.Visible = false;
             this.selected_lec.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // duration
@@ -302,6 +304,11 @@ namespace Time_Table_Management_System
             this.lect_2.TabIndex = 52;
             this.lect_2.ValueMember = "lecturerName";
             this.lect_2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // lectureBindingSource1
+            // 
+            this.lectureBindingSource1.DataMember = "lecture";
+            this.lectureBindingSource1.DataSource = this.tLMDataSet1;
             // 
             // group
             // 
@@ -470,11 +477,6 @@ namespace Time_Table_Management_System
             // 
             this.subjectTableAdapter.ClearBeforeFill = true;
             // 
-            // lectureBindingSource1
-            // 
-            this.lectureBindingSource1.DataMember = "lecture";
-            this.lectureBindingSource1.DataSource = this.tLMDataSet1;
-            // 
             // addSession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -497,6 +499,7 @@ namespace Time_Table_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentGroupBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet)).EndInit();
@@ -505,7 +508,6 @@ namespace Time_Table_Management_System
             this.panel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lectureBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -51,12 +51,17 @@ namespace Time_Table_Management_System
             this.roomToSubjectID = new System.Windows.Forms.TextBox();
             this.roomtosession = new System.Windows.Forms.DataGridView();
             this.sessionTableAdapter = new Time_Table_Management_System.TLMDataSet6TableAdapters.sessionTableAdapter();
+            this.tLMDataSet7 = new Time_Table_Management_System.TLMDataSet7();
+            this.roomTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.roomTBTableAdapter = new Time_Table_Management_System.TLMDataSet7TableAdapters.roomTBTableAdapter();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sessionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet6)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomtosession)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -166,12 +171,15 @@ namespace Time_Table_Management_System
             // 
             // roomselect
             // 
+            this.roomselect.DataSource = this.roomTBBindingSource;
+            this.roomselect.DisplayMember = "roomName";
             this.roomselect.Dock = System.Windows.Forms.DockStyle.Top;
             this.roomselect.FormattingEnabled = true;
             this.roomselect.Location = new System.Drawing.Point(219, 130);
             this.roomselect.Name = "roomselect";
             this.roomselect.Size = new System.Drawing.Size(210, 24);
             this.roomselect.TabIndex = 46;
+            this.roomselect.ValueMember = "roomName";
             // 
             // tableLayoutPanel2
             // 
@@ -282,6 +290,20 @@ namespace Time_Table_Management_System
             // 
             this.sessionTableAdapter.ClearBeforeFill = true;
             // 
+            // tLMDataSet7
+            // 
+            this.tLMDataSet7.DataSetName = "TLMDataSet7";
+            this.tLMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roomTBBindingSource
+            // 
+            this.roomTBBindingSource.DataMember = "roomTB";
+            this.roomTBBindingSource.DataSource = this.tLMDataSet7;
+            // 
+            // roomTBTableAdapter
+            // 
+            this.roomTBTableAdapter.ClearBeforeFill = true;
+            // 
             // Manage_session
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -307,6 +329,8 @@ namespace Time_Table_Management_System
             ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet6)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roomtosession)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tLMDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomTBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +359,8 @@ namespace Time_Table_Management_System
         private TLMDataSet6 tLMDataSet6;
         private System.Windows.Forms.BindingSource sessionBindingSource;
         private TLMDataSet6TableAdapters.sessionTableAdapter sessionTableAdapter;
+        private TLMDataSet7 tLMDataSet7;
+        private System.Windows.Forms.BindingSource roomTBBindingSource;
+        private TLMDataSet7TableAdapters.roomTBTableAdapter roomTBTableAdapter;
     }
 }

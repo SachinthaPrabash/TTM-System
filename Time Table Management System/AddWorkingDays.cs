@@ -45,18 +45,21 @@ namespace Time_Table_Management_System
                                
                 AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
                 AddWorkingDaysModel.startTime = comboBox3.Text;
+                AddWorkingDaysModel.endTime = comboBox5.Text;
                 AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
                 //insert to db
                 addcontrol.insertaddWorkingDetails(AddWorkingDaysModel);
+
                 // page load
                 dataview.DataSource = addcontrol.getworkingdaysvalues();
                 dataGridViewdays.DataSource = addcontrold.getdaysvalues();
-
                 //get value
                /* textBox1.Text = "";*/
                 comboBox1.Text = "";
                 comboBox3.Text = "";
+                comboBox5.Text = "";
+
                 comboBox4.Text = "";
 
             }
@@ -68,20 +71,21 @@ namespace Time_Table_Management_System
         //delete button
         private void btndelete_Click(object sender, EventArgs e)
         {
-            int x = int.Parse(Aid.Text);
+            string x = Aid.Text;
 
             //delete from db
             addcontrol.deleteWorkingDetails(x);
             Aid.Text = "";
-            //page load
-            dataview.DataSource = addcontrol.getworkingdaysvalues();
 
             //get value
             
             comboBox1.Text = "";
             comboBox3.Text = "";
+            comboBox5.Text = "";
             comboBox4.Text = "";
 
+            //page load
+            dataview.DataSource = addcontrol.getworkingdaysvalues();
         }
 
         //update button
@@ -97,6 +101,7 @@ namespace Time_Table_Management_System
             AddWorkingDaysModel.id = int.Parse(Aid.Text);
             AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
             AddWorkingDaysModel.startTime = comboBox3.Text;
+            AddWorkingDaysModel.endTime = comboBox5.Text;
             AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
             //update db
@@ -110,6 +115,7 @@ namespace Time_Table_Management_System
             Aid.Text = "";
             comboBox1.Text = "";
             comboBox3.Text = "";
+            comboBox5.Text = "";
             comboBox4.Text = "";
 
 
@@ -132,7 +138,8 @@ namespace Time_Table_Management_System
             {
 
                 DataGridViewRow row = this.dataview.Rows[e.RowIndex];
-                
+
+                Aid.Text = row.Cells["WorkID"].Value.ToString();
                 comboBox1.Text = row.Cells["NoOfWorkingDays"].Value.ToString();
                 comboBox3.Text = row.Cells["StratTime"].Value.ToString();
                 comboBox5.Text = row.Cells["EndTime"].Value.ToString();

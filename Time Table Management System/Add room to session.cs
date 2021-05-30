@@ -50,6 +50,8 @@ namespace Time_Table_Management_System
 
         private void Manage_session_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tLMDataSet7.roomTB' table. You can move, or remove it, as needed.
+            this.roomTBTableAdapter.Fill(this.tLMDataSet7.roomTB);
             // TODO: This line of code loads data into the 'tLMDataSet6.session' table. You can move, or remove it, as needed.
             this.sessionTableAdapter.Fill(this.tLMDataSet6.session);
             roomtosession.DataSource = ManageSessionControl.getsessionValues();
