@@ -123,7 +123,7 @@ namespace Time_Table_Management_System
 
             String lec = lecinput.Text;
 
-            SqlDataAdapter sd = new SqlDataAdapter("select distinct s.sesId,w.NoOfWorkingDays,s.lec1,sg.SubGroupID,s.duration,r.roomname from WorkingDays w,session s, lecture l,StudentGroup sg, roomTB r,sessionForRoom sr where s.lec1 = l.lid and sr.sesID = s.sesId and sr.roomname = r.roomID and w.EmployeeId = l.lid and sg.StudentgropID = s.group_no and s.lec1 = '" + lec + "' ", con);
+            SqlDataAdapter sd = new SqlDataAdapter("select distinct s.sesId, l.lecturerName, sg.SubGroupID, s.duration, r.roomname, lo.locationName from WorkingDays w,session s,lecture l,StudentGroup sg, roomTB r,sessionForRoom sr,locationTB lo  where s.lec1 = l.lid and sr.sesID = s.sesId and lo.locationID=r.locationID and sr.roomname = r.roomID and sg.StudentgropID = s.group_no and s.lec1 = '" + lec + "' ", con);
             DataTable dt = new DataTable();
             sd.Fill(dt);
 

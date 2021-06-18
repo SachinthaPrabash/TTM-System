@@ -47,7 +47,7 @@ namespace Time_Table_Management_System
                 AddWorkingDaysModel.noOfWorkingDays = int.Parse(comboBox1.Text);
                 AddWorkingDaysModel.startTime = comboBox3.Text;
                 AddWorkingDaysModel.endTime = comboBox5.Text;
-                AddWorkingDaysModel.endtime = comboBox5.Text;
+               
                 AddWorkingDaysModel.timeSlot = comboBox4.Text;
 
                 //insert to db
@@ -60,6 +60,7 @@ namespace Time_Table_Management_System
                /* textBox1.Text = "";*/
                 comboBox1.Text = "";
                 comboBox3.Text = "";
+                comboBox5.Text = "";
                 comboBox4.Text = "";
 
             }
